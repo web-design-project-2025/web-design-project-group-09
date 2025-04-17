@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Bacon Pancakes",
+        "category": "meals",
+        "media": "animated-media",
+        "preferences": []
+      },
+      {
+        "id": 2,
+        "name": "Senku Cola",
+        "category": "drinks",
+        "media": "print-media",
+        "preferences": ["vegetarian", "dairy-free", "gluten-free"]
+      },
+      {
+        "id": 3,
+        "name": "Bloom Into You Cheesecake",
+        "category": "desserts",
+        "media": "print-media",
+        "preferences": "vegetarian"
+      }
+]
