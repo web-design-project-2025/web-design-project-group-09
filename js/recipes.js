@@ -46,11 +46,16 @@ function filterRecipes() {
     var matchCategory =
       selectedCategories.length === 0 ||
       selectedCategories.includes(recipeCategory);
-    var matchMedia =
-      selectedMedia.length === 0 || selectedMedia.includes(recipeMedia);
-    // The recipePreferences is a string, so it needs to be split into an array
+
+    // The recipeMedia and recipePreferences are strings, so it needs to be split into an array
     // The idea to use split was taken from this link: https://www.w3schools.com/jsref/jsref_split.asp
-      var matchPreferences =
+    var matchMedia =
+      selectedMedia.length === 0 ||
+      selectedMedia.every(function (media) {
+        return recipeMedia.includes(media);
+      });
+
+    var matchPreferences =
       selectedPreferences.length === 0 ||
       selectedPreferences.every(function (pref) {
         return recipePreferences.includes(pref);
