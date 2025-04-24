@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+main {
+  flex: 1;
+}
+
+/* Header part */
+.nav_header {
+  display: flex;
+  background-color: #ffd89a;
+  justify-content: space-between;
+}
+.ul_header_logo {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 20px;
+  margin: 0pt;
+  background-color: #ffd89a;
+}
+.ul_header_right {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-right: 20px;
+  margin: 0pt;
+  background-color: #ffd89a;
+}
+.txt_header {
+  font-size: 28pt;
+  color: #832612;
+  padding: 30pt;
+}
+.txt-deco-none {
+  text-decoration: none;
+}
+/* .logo-padding {
+  padding-left: 15px;
+  padding-top: 15px;
+} */
+
+/* Footer part */
+footer {
+  min-height: 50px;
+  background: #ffd89a;
+  width: 100%;
+  bottom: 0;
+  padding: 50px 0 30px;
+  line-height: 20px;
+}
+.logo-footer {
+  width: 50%;
+  align-items: start;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 70px 0;
+  box-sizing: border-box;
+  list-style: none;
+
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+/* footer */
+.solo_img {
+  width: 100px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-left: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.in_row {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-col {
+  padding: 0;
+  margin-bottom: 4rem;
+  align-items: start;
+  padding: 0 15px;
+}
+
+.footer-col ul li:not(:last-child) {
+  /* margin-bottom: 10px; */
+}
+
+.footer-col ul li a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color: #220806;
+}
+
+.footer-col ul li a:hover {
+  transform: translateX(10px);
+}
+
+.footer-col .social-links a {
+  /* display: inline-block; */
+  height: 40px;
+  /* margin: 0 5px 10px 0; */
+  line-height: 40px;
+  border-radius: 50%;
+  color: #220806;
+  transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover {
+  /* transform: none; */
+  /* color: #fdd4da; */
+}
+
+.social-links {
+  font-size: 1.75rem;
+}
+
+.social-links li a:not(:last-child) {
+  margin-right: 1rem;
+}
