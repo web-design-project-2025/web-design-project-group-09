@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bacon Pancakes</title>
+    <script src="js/recipes.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/recipes.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main class="recipes-and-filters-container">
+      <section class="filter-section">
+        <h2>Recipes</h2>
+
+        <!-- Sort By -->
+        <section class="filter-group">
+          <h3>Sort By</h3>
+          <div>
+            <input type="checkbox" id="drinks" value="drinks" />
+            <span>Drinks</span>
+          </div>
+          <div>
+            <input type="checkbox" id="meals" value="meals" />
+            <span>Meals</span>
+          </div>
+          <div>
+            <input type="checkbox" id="desserts" value="desserts" />
+            <span>Desserts</span>
+          </div>
+        </section>
+
+        <!-- Media -->
+        <section class="filter-group">
+          <h3>Media</h3>
+          <div>
+            <input type="checkbox" id="games" value="games" />
+            <span>Games</span>
+          </div>
+          <div>
+            <input type="checkbox" id="animated-media" value="animated-media" />
+            <span>Animated Media</span>
+          </div>
+          <div>
+            <input type="checkbox" id="print-media" value="print-media" />
+            <span>Print Media</span>
+          </div>
+          <div>
+            <input type="checkbox" id="live-action-media" value="live-action-media" />
+            <span>Live-action Media</span>
+          </div>
+        </section>
+
+        <!-- Special Preferences -->
+        <section class="filter-group">
+          <h3>Special Preferences</h3>
+          <div>
+            <input type="checkbox" id="vegetarian" value="vegetarian" />
+            <span>Vegetarian</span>
+          </div>
+          <div>
+            <input type="checkbox" id="dairy-free" value="dairy-free" />
+            <span>Dairy-free</span>
+          </div>
+          <div>
+            <input type="checkbox" id="gluten-free" value="gluten-free" />
+            <span>Gluten-free</span>
+          </div>
+        </section>
+      </section>
+
+        <!-- Recipes Section -->
+        <section class="recipes-container">
+          <!-- Bacon Pancakes Recipe -->
+          <a href="#">
+            <figure
+              class="recipe"
+              data-id="1"
+              data-category="meals"
+              data-media="animated-media"
+              data-preferences=""
+            >
+              <img
+                class="recipe-1"
+                src="img/bacon-pancakes-1.png"
+                alt="image from Adventure Time of Jake cooking bacon pancakes"
+              />
+              <img class="recipe-2" src="img/bacon-pancakes-2.png" alt="image of a stack of real bacon pancakes on a plate with syrup and butter">
+              <figcaption>
+                <div class="recipe-name">
+                  <strong>Bacon Pancakes</strong>
+                </div>
+                <p class="recipe-description">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <!-- Senku Cola Recipe -->
+          <a href="#">
+            <figure
+              class="recipe"
+              data-id="2"
+              data-category="drinks"
+              data-media="print-media animated-media"
+              data-preferences="vegetarian dairy-free gluten-free"
+            >
+              <img
+                class="recipe-1"
+                src="img/cola-1.png"
+                alt="image of Senku Cola from Dr. Stone"
+              />
+              <img class="recipe-2" src="img/cola-2.png" alt="image of a realistic Senku Cola in a bottle on a white plate">
+              <figcaption>
+                <div class="recipe-name">
+                  <strong>Senku Cola</strong>
+                </div>
+                <p class="recipe-description">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </figcaption>
+            </figure>
+          </a>
+
+          <!-- Bloom Into You Cheesecake Recipe -->
+          <a href="#">
+            <figure
+              class="recipe"
+              data-id="3"
+              data-category="desserts"
+              data-media="print-media animated-media"
+              data-preferences="vegetarian"
+            >
+              <img
+                class="recipe-1"
+                src="img/bloom-cheesecake-1.jpg"
+                alt="image of a cheesecake from Bloom Into You"
+              />
+              <img class="recipe-2" src="img/bloom-cheesecake-2.png" alt="image of a realistic cheesecake on a white plate and a missing slice">
+              <figcaption>
+                <div class="recipe-name">
+                  <strong>Bloom Into You Cheesecake</strong>
+                </div>
+                <p class="recipe-description">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </figcaption>
+            </figure>
+          </a>
+        </section>
+    </main>
+  </body>
+</html>
