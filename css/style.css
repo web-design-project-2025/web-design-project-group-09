@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "redaction-35";
+  src: url(../redaction-35-latin-700-normal.ttf);
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Aeonik-Italic";
+  src: url(../Aeonik-RegularItalic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Aeonik-Bold";
+  src: url(../Aeonik-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+.r35 {
+  font-family: "redaction-35", arial, sans-serif;
+}
+.ae_rg {
+  font-family: "Aeonik-Regular", arial, sans-serif;
+}
+.ae_it {
+  font-family: "Aeonik-Italic", arial, sans-serif;
+}
+.ae_bd {
+  font-family: "Aeonik-Bold", arial, sans-serif;
+}
+
+.h4_footer {
+  font-family: "Aeonik-Bold", arial, sans-serif;
+  font-size: 24pt;
+  color: #832612;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 14pt;
+}
