@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Recipes",
+    "link": "recipes.html"
+  },
+  {
+    "id": 2,
+    "name": "About",
+    "link": "about.html"
+  },
+  {
+    "id": 3,
+    "name": "Example 3",
+    "link": "#"
+  }
+]
