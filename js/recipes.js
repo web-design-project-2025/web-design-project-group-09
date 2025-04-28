@@ -32,6 +32,17 @@ function createRecipeElement(recipe) {
   const img = document.createElement("img");
   img.src = recipe.image;
   img.alt = recipe.name;
+
+  // Change image on hover
+  if (recipe.hoverImage) {
+    img.addEventListener("mouseover", function() {
+      img.src = recipe.hoverImage;
+    });
+    img.addEventListener("mouseout", function() {
+      img.src = recipe.image;
+    });
+  }
+
   figure.appendChild(img);
 
   // Create the title and details elements
