@@ -7,7 +7,7 @@
 
 #searchbar_section figcaption {
   border: 2px solid #832612;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-top: -1px; /* Prevent double borders */
   background-color: #ffd89a;
   padding: 12px;
@@ -21,7 +21,7 @@
   background-color: #ecc687;
 }
 #searchbar_section figure {
-  margin: 5px 0px 0px 0px;
+  margin: 3px 0px 0px 0px;
 }
 #searchbar_Input {
   background-position: 10px 12px;
@@ -42,4 +42,18 @@
 .website {
   text-decoration: none;
   color: black;
+}
+.website figcaption {
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.searchbar_button {
+  border: none;
+  padding: 0;
+  background-color: #ffd89a;
+  margin-top: 10px;
+}
+.searchbar_button:hover {
+  cursor: pointer;
 }

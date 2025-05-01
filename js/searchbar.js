@@ -1,8 +1,16 @@
 document.getElementById("searchbar_section").style.display = "none";
+document.getElementById("searchbar_div").style.display = "none";
 
 let websites = [];
 const websitesContainer = document.getElementById("websites-container");
 
+function switchSearchbarVisibility() {
+  if (document.getElementById("searchbar_div").style.display == "none") {
+    document.getElementById("searchbar_div").style.display = "block";
+  } else {
+    document.getElementById("searchbar_div").style.display = "none";
+  }
+}
 async function loadSites() {
   const response = await fetch("json/website_list_searchbar.json");
   const data = await response.json();
