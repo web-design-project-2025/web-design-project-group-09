@@ -35,8 +35,9 @@
   border-radius: 10px;
 }
 
-::placeholder {
+#searchbar_div ::placeholder {
   color: #832612;
+  opacity: 40%;
 }
 
 .website {
