@@ -1,5 +1,6 @@
 document.getElementById("searchbar_section").style.display = "none";
 document.getElementById("searchbar_div").style.display = "none";
+localStorage.setItem("searchbarActive", null);
 
 let websites = [];
 const websitesContainer = document.getElementById("websites-container");
@@ -73,3 +74,27 @@ function myFunction() {
     }
   }
 }
+
+let searchbarActive = localStorage.getItem("searchbarActive");
+const themeSwitch = document.getElementById("searchbarSwitch");
+const searchbar_button = document.getElementById("searchbarSwitch");
+const enableSearchbar = () => {
+  searchbar_button.classList.add("searchbarActive");
+  localStorage.setItem("searchbarActive", "active");
+};
+
+const disableSearchbar = () => {
+  searchbar_button.classList.remove("searchbarActive");
+  localStorage.setItem("searchbarActive", null);
+};
+
+if (searchbarActive === "active") enableSearchbar();
+
+themeSwitch.addEventListener("click", () => {
+  searchbarActive = localStorage.getItem("searchbarActive");
+  if (searchbarActive !== "active") {
+    enableSearchbar();
+  } else {
+    disableSearchbar();
+  }
+});

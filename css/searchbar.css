@@ -53,8 +53,30 @@
   border: none;
   padding: 0;
   background-color: #ffd89a;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .searchbar_button:hover {
   cursor: pointer;
+}
+
+#icon-switch {
+  height: 40px;
+  width: 42px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+}
+
+#icon-switch svg:last-child {
+  display: none;
+}
+
+.searchbarActive #icon-switch svg:first-child {
+  display: none;
+}
+
+.searchbarActive #icon-switch svg:last-child {
+  display: block;
 }
