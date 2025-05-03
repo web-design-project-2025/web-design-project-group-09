@@ -1,20 +1,21 @@
 .title_bg {
   display: flex;
-  padding: 10px 100px 10px 100px;
+  min-height: 150px;
+  padding-left: 70px;
   align-items: center;
 }
 .white_bg {
   display: flex;
   padding: 10px 100px 10px 100px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .pink_bg {
   background-color: #fff3e0;
   display: flex;
   padding: 10px 100px 10px 100px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .inside_element {
   margin-right: 70px;
