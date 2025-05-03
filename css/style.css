@@ -43,6 +43,15 @@
   margin-top: 15px;
   margin-bottom: 30px;
 }
+.h1_title {
+  font-family: "redaction-35", arial, sans-serif;
+  font-size: 34pt;
+}
+.h3_names {
+  font-family: "redaction-35", arial, sans-serif;
+  font-size: 18pt;
+  color: #832612;
+}
 p {
   font-size: 14pt;
 }
