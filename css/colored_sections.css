@@ -4,16 +4,23 @@
   padding-left: 70px;
   align-items: center;
 }
+.title_bg_pink {
+  background-color: #fff3e0;
+  display: flex;
+  min-height: 150px;
+  padding-left: 70px;
+  align-items: center;
+}
 .white_bg {
   display: flex;
-  padding: 10px 100px 10px 100px;
+  padding: 50px 100px 50px 100px;
   align-items: center;
   justify-content: space-evenly;
 }
 .pink_bg {
   background-color: #fff3e0;
   display: flex;
-  padding: 10px 100px 10px 100px;
+  padding: 50px 100px 50px 100px;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -27,3 +34,17 @@
   display: flex;
   flex-direction: column;
 }
+
+/* Responsiveness */
+@media screen and (min-width: 100px) {
+  .pink_bg {
+    /* width: 100%; */
+    /* unicode-bidi: isolate; */
+  }
+}
+
+/* @media screen and (min-width: 1080px) {
+  .recipes-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+} */
