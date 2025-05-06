@@ -10,13 +10,36 @@
         "rating": 5,
         "time": "40 minutes",
         "ingredients": [
-            "2 cups all-purpose flour",
-            "1 tablespoon baking powder",
-            "1/2 teaspoon salt",
-            "2 tablespoons sugar",
-            "2 cups milk",
-            "2 large eggs",
-            "4 strips of bacon, cooked and crumbled"
+            "All-purpose flour - 125 g",
+            "Baking powdeer - 10 g",
+            "Granulated sugar - 25 g",
+            "Salt - 1 g",
+            "Milk - 240 ml",
+            "Eggs - 1",
+            "Melted butter (or neutral oil, like sunflower/canola) - 30 g",
+            "4 strips of bacon"
+        ],
+        "directions": [
+          { 
+            "title": "Preheat the oven and cook bacon",
+            "description": "Preheat the oven to 200°F. In a large cast-iron or non-stick skillet or on a griddle, cook bacon over medium-high until fat is rendered and bacon is browned on one side, 5 to 6 minutes. Flip and cook until golden and crisp on underside, 1 to 3 minutes.",
+            "image": "img/bacon-pancakes-step1.jpg"
+          },
+          { 
+            "title": "Transfer bacon to paper towels",
+            "description": "Drain bacon on paper towels; pour off all but 1 teaspoon from skillet (reserve for another use).",
+            "image": "img/bacon-pancakes-step2.jpg"
+          },
+          { 
+            "title": "Combine ingredients to make the batter",
+            "description": "In a bowl, whisk together flour, sugar, baking powder, baking soda, and salt. In another bowl, whisk together buttermilk, melted butter, and egg. Whisk flour mixture into buttermilk mixture just until moistened, with small to medium lumps remaining.",
+            "image": "img/bacon-pancakes-step3.jpg"
+          },
+          { 
+            "title": "Heat skiller and cook abcon pancakes",
+            "description": "Heat skillet over medium heat. Cook pancakes in batches: Space slices of bacon evenly around the skillet, leaving space for pancake batter. Pour 1/4-cupfulls batter over each slice. Cook until some bubbles appear on top of pancakes and a few have burst, about 2 minutes. With a spatula, carefully flip pancakes and cook until browned on underside, about 2 minutes. Transfer to a platter, bacon side up, and loosely tent with foil. Keep pancakes warm in oven and repeat with remaining batter, adding more bacon fat if needed. Serve with pure maple syrup, if desired.",
+            "image": "img/bacon-pancakes-step4.jpg"
+          }
         ]
       },
 
@@ -29,7 +52,37 @@
         "media": ["print-media", "animated-media"],
         "preferences": ["vegetarian", "dairy-free", "gluten-free"],
         "rating": 5,
-        "time": "10 minutes"
+        "time": "10 minutes",
+        "ingredients": [
+            "Dark Honey - 1 cup",
+            "Lime - 1",
+            "Cilantro - 2/3 cup",
+            "Carbonated Water - 8 oz"
+        ],
+        "directions": [
+          { 
+            "title": "Heat up the Dark Honey",
+            "description": "Put about a cup of dark honey in a small, nonstick skillet on LOW heat. It should be bubbling only a little bit. Stir frequently for 5-10 minutes. Let cool but still warm and liquid."
+          },
+          { 
+            "title": "Transfer bacon to paper towels",
+            "description": "In a separate container, combine lime juice from one lime and cilantro leaves that have been finely chopped. Not much cilantro is needed. You'll have the juice from one lime, then pack as much chopped cilantro as the lime juice will cover, let it sit for 5 minutes, then strain out the cilantro. If you crammed cilantro into a shot glass until full, that would be plenty.",
+            "image": "img/senku-cola-step2.jpg"
+          },
+          { 
+            "title": "Mix",
+            "description": "Put about 1-2 tablespoons of warm honey into a small microwavable container. Add lime juice and stir. If they do not mix, microwave it for a few seconds and mix again until blended."
+          },
+          { 
+            "title": "Chill Mixture",
+            "description": "Chill this mixture in the fridge. Stir occasionally, it should not separate. The carbonated water should also be chilled. This avoids diluting the flavor if ice is added.",
+            "image": "img/senku-cola-step4.jpg"
+          },
+          { 
+            "title": "Add Soda Water",
+            "description": "Once they are cold, combine the mixture with 8 oz carbonated water and gently stir. Repeat steps 3-4 with the rest of the honey before it hardens, save for later."
+          }
+        ]
       },
 
       {
@@ -41,6 +94,48 @@
         "media": ["print-media", "animated-media"],
         "preferences": ["vegetarian"],
         "rating": 5,
-        "time": "1 hour"
+        "time": "1 hour",
+        "ingredients": [
+          "Cream cheese - 16 oz",
+          "Heavy creame - 2/3 cup",
+          "Granulated sugar - 2/3 g",
+          "Eggs - 2",
+          "Cake flour - 1/2 cup",
+          "Cookies - 2 cups, crushed (vanilla wafers or graham crackers)",
+          "Vanilla extract - 1 tsp",
+          "Salt - 1/4 tsp",
+          "Lemon juice - 1/4 cup",
+          "Butter - 1/2 cup"
+      ],
+      "directions": [
+        { 
+          "title": "Preheat the oven to 340 F"
+        },
+        { 
+          "title": "Butter and Cookies",
+          "description": "Melt the butter on low heat, put the cookies into a plastic bag and finely crush them, then combine them with the melted butter.",
+          "image": "img/bloom-cheesecake-step2.jpg"
+        },
+        { 
+          "title": "Crust refrigeration",
+          "description": "Line the bottom of a 9” springform cake pan with parchment paper. Spoon in the mixture, press down with a flat object to spread evenly over the bottom of the pan, Place in the refrigerator to cool.",
+          "image": "img/cloom-cheesecake-step3.jpg"
+        },
+        { 
+          "title": "Mix the Batter",
+          "description": "In a large bowl, beat the cream cheese together with the eggs (Add the eggs one at a time until mixed in), cake flour (to prevent the cake flour from making lumps, pass it through a fine mesh strainer), heavy cream, lemon juice , vanilla and salt.",
+          "image": "img/bloom-cheesecake-step4.jpg"
+        },
+        { 
+          "title": "Combine Crust and Batter",
+          "description": "Remove the crust from the refrigerator and pour the mixture on top and spread evenly across.",
+          "image": "img/bloom-cheesecake-step5.jpg"
+        },
+        { 
+          "title": "Bake",
+          "description": "Place in the oven and bake for 30 minutes , reduce the temperature to 300 F and bake for 30 more minutes. Then turn off the heat and leave the cheesecake in the oven for 60 minutes. Let it cool completely.",
+          "image": "img/bloom-cheesecake-step6.jpg"
+        }
+      ]
       }
 ]

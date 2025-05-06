@@ -5,12 +5,64 @@ async function loadRecipe() {
     const response = await fetch('json/recipes.json');
     const data = await response.json();
   
+    // Find the recipe with the given id
+    // The idea to use find() was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+    //The find() method gives the recipe that matches the condition
+
+    // We use == to allow for both string and number comparison because the id in the URL is a string and the id in the JSON is a number
     const recipe = data.find(r => r.id == id);
   
     if (recipe) {
       document.getElementById("detailed-recipe-title").innerText = recipe.name;
       document.getElementById("detailed-recipe-image").src = recipe.image;
       document.getElementById("detailed-recipe-description").innerText = recipe.time;
+
+      // Ingredients
+      const ingredientsList = document.getElementById("ingredients-list");
+      let ingredients = "<ul>";
+      
+      // We check if the recipe has ingredients and if it is not empty
+      if (recipe.ingredients && recipe.ingredients.length > 0) {
+        // The next lines of code were adapted from this video: https://www.youtube.com/watch?v=Zrte7QVPuLY&ab_channel=DanProgramming
+        for (let i = 0; i < recipe.ingredients.length; i++) {
+          ingredients += "<li>" + recipe.ingredients[i] + "</li>";
+        }
+      }
+      
+      ingredients += "</ul>";
+      
+      ingredientsList.innerHTML = ingredients;
+
+      // Directions
+      const directionsContainer = document.getElementById("directions-container");
+      let directions = "";
+
+      if (recipe.directions && recipe.directions.length > 0) {
+        for (let i = 0; i < recipe.directions.length; i++) {
+          // We call step the current step of the recipe for better readability
+          const step = recipe.directions[i];
+          directions += "<li>";
+
+          // Step title
+          if (recipe.directions[i].title) {
+            directions += "<strong>" + step.title + "</strong><br>";
+          }
+
+          // Step description
+          if (step.description) {
+            directions += "<p>" + step.description + "</p>";
+          }
+
+          if (step.image) {
+            // The image property is optional, so we check if it exists before using it
+            directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
+          }
+          directions += "</li>";
+        }
+      }
+
+      directionsContainer.innerHTML = directions;
+
     } else {
         // In case, there is no recipe with the given id, we show a default message
       document.getElementById("detailed-recipe-title").innerText = "Recipe not found";
@@ -18,4 +70,3 @@ async function loadRecipe() {
   }
   
   loadRecipe();
-  
