@@ -7,7 +7,7 @@ async function loadRecipe() {
   
     // Find the recipe with the given id
     // The idea to use find() was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    //The find() method gives the recipe that matches the condition
+    // The find() method gives the recipe that matches the condition
 
     // We use == to allow for both string and number comparison because the id in the URL is a string and the id in the JSON is a number
     const recipe = data.find(r => r.id == id);
