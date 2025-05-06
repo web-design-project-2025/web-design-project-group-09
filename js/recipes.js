@@ -18,18 +18,22 @@ function renderRecipes() {
 }
 
 function createRecipeElement(recipe) {
-  const figure = document.createElement("figure");
+  // Create the link element
+  var link = document.createElement("a");
+  link.href = "detailed-recipe.html?id=" + recipe.id;
+
+  // Create the figure element
+  var figure = document.createElement("figure");
   figure.classList.add("recipe");
 
   // Add data attributes for filtering
-  // These attributes will be used in the filtering function to check if the recipe matches the selected filters
   figure.setAttribute("data-id", recipe.id);
   figure.setAttribute("data-category", recipe.category);
   figure.setAttribute("data-media", recipe.media);
   figure.setAttribute("data-preferences", recipe.preferences.join(" "));
 
   // Create the image element
-  const img = document.createElement("img");
+  var img = document.createElement("img");
   img.src = recipe.image;
   img.alt = recipe.name;
 
@@ -46,23 +50,24 @@ function createRecipeElement(recipe) {
   figure.appendChild(img);
 
   // Create the title and details elements
-  const title = document.createElement("strong");
+  var title = document.createElement("strong");
   title.innerText = recipe.name;
 
-  // Create the details element and set its attributes
-  const details = document.createElement("p");
+  var details = document.createElement("p");
   details.classList.add("recipe-description");
   details.innerHTML = `${"★".repeat(recipe.rating)}<br>${recipe.time}`;
 
-  // Create the caption element and append the title and details to it
-  const caption = document.createElement("figcaption");
+  var caption = document.createElement("figcaption");
   caption.appendChild(title);
   caption.appendChild(details);
 
   figure.appendChild(caption);
 
-  return figure;
+  link.appendChild(figure);
+
+  return link;
 }
+
 
 loadData();
 
