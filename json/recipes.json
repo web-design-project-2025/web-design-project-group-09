@@ -8,7 +8,16 @@
         "media": "animated-media",
         "preferences": [],
         "rating": 5,
-        "time": "40 minutes"
+        "time": "40 minutes",
+        "ingredients": [
+            "2 cups all-purpose flour",
+            "1 tablespoon baking powder",
+            "1/2 teaspoon salt",
+            "2 tablespoons sugar",
+            "2 cups milk",
+            "2 large eggs",
+            "4 strips of bacon, cooked and crumbled"
+        ]
       },
 
       {
