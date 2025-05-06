@@ -1,88 +1,187 @@
-// Recipe filters
+let recipes = [];
+const recipesContainer = document.getElementById("recipes-container");
 
-// Get elements by their IDs
-var drinks = document.getElementById("drinks");
-var meals = document.getElementById("meals");
-var desserts = document.getElementById("desserts");
-var games = document.getElementById("games");
-var animatedMedia = document.getElementById("animated-media");
-var printMedia = document.getElementById("print-media");
-var liveActionMedia = document.getElementById("live-action-media");
-var vegetarian = document.getElementById("vegetarian");
-var dairyFree = document.getElementById("dairy-free");
-var glutenFree = document.getElementById("gluten-free");
-var recipes = document.querySelectorAll(".recipes-container .recipe");
+async function loadData() {
+  const response = await fetch('json/recipes.json');
+  const data = await response.json();
+  recipes = data;
+  renderRecipes();
+}
 
-// Function to filter recipes
-function filterRecipes() {
-  // Initializing an empty array for each category (drinks, meals, desserts) that will store the selected categories
-  var selectedCategories = [];
-  // If the checkbox is checked, the string is added to the selectedCategories array
-  // The idea to use push was taken from this link: https://www.w3schools.com/jsref/jsref_push.asp
-  if (drinks.checked) selectedCategories.push("drinks");
-  if (meals.checked) selectedCategories.push("meals");
-  if (desserts.checked) selectedCategories.push("desserts");
+function renderRecipes() {
+  recipesContainer.innerHTML = "";
 
-  var selectedMedia = [];
-  if (games.checked) selectedMedia.push("games");
-  if (animatedMedia.checked) selectedMedia.push("animated-media");
-  if (printMedia.checked) selectedMedia.push("print-media");
-  if (liveActionMedia.checked) selectedMedia.push("live-action-media");
-
-  var selectedPreferences = [];
-  if (vegetarian.checked) selectedPreferences.push("vegetarian");
-  if (dairyFree.checked) selectedPreferences.push("dairy-free");
-  if (glutenFree.checked) selectedPreferences.push("gluten-free");
-
-  for (var i = 0; i < recipes.length; i++) {
-    // Retrives attributes from the recipe elements
-    var recipe = recipes[i];
-    var recipeCategory = recipe.getAttribute("data-category");
-    var recipeMedia = recipe.getAttribute("data-media");
-    var recipePreferences = recipe.getAttribute("data-preferences");
-
-    // Checks if the recipe matches the selected categories, media and preferences
-    // Stores the results of the checks in the variables
-    var matchCategory =
-      selectedCategories.length === 0 ||
-      selectedCategories.includes(recipeCategory);
-
-    // The recipeMedia and recipePreferences are strings, so it needs to be split into an array
-    // The idea to use split was taken from this link: https://www.w3schools.com/jsref/jsref_split.asp
-    var matchMedia =
-      selectedMedia.length === 0 ||
-      selectedMedia.every(function (media) {
-        return recipeMedia.includes(media);
-      });
-
-    var matchPreferences =
-      selectedPreferences.length === 0 ||
-      selectedPreferences.every(function (pref) {
-        return recipePreferences.includes(pref);
-      });    
-
-    //If the recipe matches the selected categories, media and preferences, the recipe is displayed
-    //The idea to use block and none was taken from this link: https://www.w3schools.com/jsref/prop_style_display.asp
-    if (matchCategory && matchMedia && matchPreferences) {
-      recipe.style.display = "block";
-    } else {
-      recipe.style.display = "none";
-    }
+  for (let recipe of recipes) {
+    const recipeElement = createRecipeElement(recipe);
+    recipesContainer.appendChild(recipeElement);
   }
 }
 
-// Idea to use change was taken from here: https://www.w3schools.com/jsref/event_onchange.asp
-// Is triggered when the checkbox is changed
-drinks.addEventListener("change", filterRecipes);
-meals.addEventListener("change", filterRecipes);
-desserts.addEventListener("change", filterRecipes);
-games.addEventListener("change", filterRecipes);
-animatedMedia.addEventListener("change", filterRecipes);
-printMedia.addEventListener("change", filterRecipes);
-liveActionMedia.addEventListener("change", filterRecipes);
-vegetarian.addEventListener("change", filterRecipes);
-dairyFree.addEventListener("change", filterRecipes);
-glutenFree.addEventListener("change", filterRecipes);
+function createRecipeElement(recipe) {
+  const figure = document.createElement("figure");
+  figure.classList.add("recipe");
 
-// Initial filter on page load
-filterRecipes();
+  // Add data attributes for filtering
+  // These attributes will be used in the filtering function to check if the recipe matches the selected filters
+  figure.setAttribute("data-id", recipe.id);
+  figure.setAttribute("data-category", recipe.category);
+  figure.setAttribute("data-media", recipe.media);
+  figure.setAttribute("data-preferences", recipe.preferences.join(" "));
+
+  // Create the image element
+  const img = document.createElement("img");
+  img.src = recipe.image;
+  img.alt = recipe.name;
+
+  // Change image on hover
+  if (recipe.hoverImage) {
+    img.addEventListener("mouseover", function() {
+      img.src = recipe.hoverImage;
+    });
+    img.addEventListener("mouseout", function() {
+      img.src = recipe.image;
+    });
+  }
+
+  figure.appendChild(img);
+
+  // Create the title and details elements
+  const title = document.createElement("strong");
+  title.innerText = recipe.name;
+
+  // Create the details element and set its attributes
+  const details = document.createElement("p");
+  details.classList.add("recipe-description");
+  details.innerHTML = `${"★".repeat(recipe.rating)}<br>${recipe.time}`;
+
+  // Create the caption element and append the title and details to it
+  const caption = document.createElement("figcaption");
+  caption.appendChild(title);
+  caption.appendChild(details);
+
+  figure.appendChild(caption);
+
+  return figure;
+}
+
+loadData();
+
+// Filtering
+// Define your filter arrays
+const categoryFilters = ["drinks", "meals", "desserts"];
+const mediaFilters = ["games", "animated-media", "print-media", "live-action-media"];
+const preferenceFilters = ["vegetarian", "dairy-free", "gluten-free"];
+
+// Listen for checkbox changes
+window.addEventListener("DOMContentLoaded", function() {
+  // Concatenate all filter arrays into one to loop through them and add event listeners to each checkbox
+  // Allows to easily add or remove filters without changing the code below
+  const allFilters = categoryFilters.concat(mediaFilters, preferenceFilters);
+  
+  for (let i = 0; i < allFilters.length; i++) {
+    const checkbox = document.getElementById(allFilters[i]);
+    if (checkbox) {
+      checkbox.addEventListener("change", filterRecipes);
+    }
+  }
+});
+
+// Filtering recipes function
+function filterRecipes() {
+  // Create empty arrays to store selected filters
+  let selectedCategories = [];
+  let selectedMedia = [];
+  let selectedPreferences = [];
+
+  // Get selected categories
+  for (let i = 0; i < categoryFilters.length; i++) {
+    const checkbox = document.getElementById(categoryFilters[i]);
+    if (checkbox && checkbox.checked) {
+      selectedCategories.push(categoryFilters[i]);
+    }
+  }
+
+  // Get selected media
+  for (let i = 0; i < mediaFilters.length; i++) {
+    const checkbox = document.getElementById(mediaFilters[i]);
+    if (checkbox && checkbox.checked) {
+      selectedMedia.push(mediaFilters[i]);
+    }
+  }
+
+  // Get selected preferences
+  for (let i = 0; i < preferenceFilters.length; i++) {
+    const checkbox = document.getElementById(preferenceFilters[i]);
+    if (checkbox && checkbox.checked) {
+      selectedPreferences.push(preferenceFilters[i]);
+    }
+  }
+
+  // Filter recipes
+  let filteredRecipes = [];
+  for (let i = 0; i < recipes.length; i++) {
+    const recipe = recipes[i];
+
+    // Match category
+    // If a category is selected, check if the recipe's category matches any of the selected categories
+    let matchesCategory = true;
+    if (selectedCategories.length > 0) {
+      if (Array.isArray(recipe.category)) {
+        matchesCategory = false;
+        for (let j = 0; j < selectedCategories.length; j++) {
+          // Check if the recipe's category matches any of the selected categories
+          if (recipe.category.indexOf(selectedCategories[j]) !== -1) {
+            matchesCategory = true;
+          }
+        }
+      } else {
+        matchesCategory = selectedCategories.indexOf(recipe.category) !== -1;
+      }
+    }
+
+    // Match media
+    let matchesMedia = true;
+    if (selectedMedia.length > 0) {
+      if (Array.isArray(recipe.media)) {
+        matchesMedia = false;
+        for (let j = 0; j < selectedMedia.length; j++) {
+          if (recipe.media.indexOf(selectedMedia[j]) !== -1) {
+            matchesMedia = true;
+          }
+        }
+      } else {
+        matchesMedia = selectedMedia.indexOf(recipe.media) !== -1;
+      }
+    }
+
+    // Match preferences
+    let matchesPreferences = true;
+    if (selectedPreferences.length > 0) {
+      if (Array.isArray(recipe.preferences)) {
+        for (let j = 0; j < selectedPreferences.length; j++) {
+          if (recipe.preferences.indexOf(selectedPreferences[j]) === -1) {
+            matchesPreferences = false;
+          }
+        }
+      } else {
+        matchesPreferences = false;
+      }
+    }
+
+    if (matchesCategory && matchesMedia && matchesPreferences) {
+      filteredRecipes.push(recipe);
+    }
+  }
+
+  renderFilteredRecipes(filteredRecipes);
+}
+
+// Render filtered recipes
+function renderFilteredRecipes(filteredList) {
+  recipesContainer.innerHTML = "";
+
+  for (let i = 0; i < filteredList.length; i++) {
+    const recipeElement = createRecipeElement(filteredList[i]);
+    recipesContainer.appendChild(recipeElement);
+  }
+}
