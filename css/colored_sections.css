@@ -44,3 +44,21 @@ body {
     min-width: 1000px;
   }
 }
+
+.pink_bg_faq {
+  background-color: #fff3e0;
+  display: flex;
+  padding: 50px 100px 50px 100px;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+}
+.white_bg_faq {
+  display: flex;
+  padding: 50px 100px 50px 100px;
+  /* align-items: center;
+  justify-content: space-evenly; */
+}
+.inside_element_faq {
+  margin-right: 70px;
+  max-width: 1000px;
+}
