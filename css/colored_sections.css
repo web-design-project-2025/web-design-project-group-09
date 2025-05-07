@@ -1,3 +1,6 @@
+body {
+  overflow: auto;
+}
 .title_bg {
   display: flex;
   min-height: 150px;
@@ -37,8 +40,7 @@
 
 /* Responsiveness */
 @media screen and (min-width: 100px) {
-  .pink_bg {
-    /* width: 100%; */
-    /* unicode-bidi: isolate; */
+  body {
+    min-width: 1000px;
   }
 }
