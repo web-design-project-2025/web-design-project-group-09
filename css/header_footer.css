@@ -6,9 +6,15 @@ body {
 }
 main {
   flex: 1;
+  margin-top: 200px;
 }
 
 /* Header part */
+
+.header {
+  background-color: #ffd89a;
+  position: absolute;
+}
 .nav_header {
   display: grid;
   flex: 1;
