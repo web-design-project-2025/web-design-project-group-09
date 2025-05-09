@@ -5,31 +5,6 @@
   --input-color: #fff3e0;
 }
 
-@font-face {
-  font-family: "redaction-35";
-  src: url(../redaction-35-latin-700-normal.ttf);
-  font-weight: 700;
-  font-style: bold;
-}
-@font-face {
-  font-family: "Aeonik-Regular";
-  src: url(../Aeonik-Regular.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Aeonik-Italic";
-  src: url(../Aeonik-RegularItalic.ttf);
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Aeonik-Bold";
-  src: url(../Aeonik-Bold.ttf);
-  font-weight: 700;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;

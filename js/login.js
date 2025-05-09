@@ -2,10 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const errorMessage = document.getElementById("error-message");
 
-
   form.addEventListener("submit", async function (e) {
-
-
     e.preventDefault();
 
     const email = document.getElementById("email-input").value.trim();
@@ -16,25 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-
-    const hashedPassword = await hashPassword(password);
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    const user = users.find(
-      (u) => u.email === email && u.password === hashedPassword
+    // Hash the input password to compare with stored hash
+    const hashedInputPassword = await hashPassword(password);
 
+    const user = users.find(
+      (u) => u.email === email && u.password === hashedInputPassword
     );
 
     if (user) {
-      // Store logged-in user info (for session/profile use)
       localStorage.setItem("loggedInUser", JSON.stringify(user));
 
       showSuccess("Login successful! Redirecting...");
 
       setTimeout(() => {
-
-        window.location.href = "profile.html"; // redirect after login
-
+        window.location.href = "profile.html";
       }, 1500);
     } else {
       showError("Invalid email or password.");
@@ -51,8 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessage.textContent = msg;
   }
 
-
-  // Function to hash string with SHA-256
+  // Hash password with SHA-256 and return as hex string
   async function hashPassword(password) {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
@@ -63,5 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
     return hashHex;
   }
-
 });
