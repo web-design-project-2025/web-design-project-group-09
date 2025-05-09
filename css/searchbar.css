@@ -28,13 +28,17 @@
   background-repeat: no-repeat;
   /* width: 100%; */
   font-size: 16px;
-  padding: 15px 20px 15px 10px;
+  padding: 15px 400px 15px 20px;
   border: 1px solid #dc9e3b;
   margin-top: 10px;
   background-color: #dc9e3b;
   border-radius: 10px;
 }
-
+#searchbar_div {
+  margin: auto;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
 #searchbar_div ::placeholder {
   color: #832612;
   opacity: 40%;
