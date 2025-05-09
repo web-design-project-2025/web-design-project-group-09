@@ -4,7 +4,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-main {
+.main {
   flex: 1;
   margin-top: 200px;
 }
