@@ -2,9 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const errorMessage = document.getElementById("error-message");
 
-
   form.addEventListener("submit", async function (e) {
-
     e.preventDefault();
 
     const username = document.getElementById("username-input").value.trim();
@@ -31,13 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-
     // Hash the password using SHA-256
     const hashedPassword = await hashPassword(password);
 
     const newUser = { username, email, password: hashedPassword };
-
-
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
 
@@ -58,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessage.textContent = msg;
   }
 
-  // Function to hash string with SHA-256
+  // Hash password with SHA-256 and return as hex string
   async function hashPassword(password) {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
@@ -69,5 +64,4 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
     return hashHex;
   }
-
 });
