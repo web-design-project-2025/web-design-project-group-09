@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" &gt />
     <title>Bacon Pancakes</title>
     <link
       rel="stylesheet"
@@ -15,10 +15,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/searchbar.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/colored_sections.css" />
     <script src="js/searchbar.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav class="nav_header">
         <ul class="ul_header_logo">
           <a class="txt-deco-none" href="index.html"
@@ -48,13 +49,6 @@
             >Recipes</a
           >
           <a class="txt-deco-none txt_header ae_bd" href="about.html">About</a>
-
-          <!-- <button
-            class="searchbar_button"
-            onclick="switchSearchbarVisibility()"
-          >
-            <img src="img/searchbar_image.png" alt="search bar" />
-          </button> -->
           <div id="searchbarSwitch">
             <button
               id="icon-switch"
@@ -130,11 +124,20 @@
       </nav>
     </header>
     <main>
-      <h1 class="r35">this is redaction 35</h1>
-      <h1 class="ae_rg">this is Aeonik regular</h1>
-      <h1 class="ae_it">this is Aeonik italic</h1>
-      <h1 class="ae_bd">this is Aeonik bold</h1>
-      <p class="ae_rg">yadiyada <b class="ae_bd">bolded word</b> yadidaya</p>
+      <div class="title_bg_pink">
+        <h1 class="r35 h1_title">Privacy policy</h1>
+      </div>
+      <div class="white_bg_faq">
+        <div class="inside_element_faq">
+          <p class="ae_it">Updated 13/04/2025</p>
+          <p class="ae_rg">
+            Thank you for visiting Bacon Pancakes (or “we” or “our” or “us”). 
+            This Privacy Policy describes the personal data handling policies of
+            Bacon Pancakes, including the following:
+          </p>
+          <p class="ae_rg">1. Nothing, we collect nothing right now</p>
+        </div>
+      </div>
     </main>
     <footer>
       <section class="footer-container">
@@ -159,7 +162,7 @@
           </section>
 
           <section class="footer-col">
-            <a href="faq.html"><h4 class="h4_footer">FAQ'S</h4></a>
+            <h4 class="h4_footer">FAQ'S</h4>
             <ul>
               <li><a href="boiling.html">Boiling Eggs?</a></li>
               <li><a href="frying.html">Frying Eggs?</a></li>
@@ -169,8 +172,8 @@
           <section class="footer-col">
             <h4 class="h4_footer">Support</h4>
             <ul>
-              <li><a href="privacy_policy.html">Privacy policy</a></li>
-              <li><a href="terms_of_service.html">Terms of Service</a></li>
+              <li><a href="about-us.html">Privacy policy</a></li>
+              <li><a href="contact-us.html">Terms of Service</a></li>
               <li><a href="privacy-policy.html">Need Help?</a></li>
             </ul>
           </section>

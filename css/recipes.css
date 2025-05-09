@@ -10,9 +10,8 @@ a {
 }
 
 .recipes-container {
-  flex: 1; 
   display: grid;
-  gap: 20px;
+  gap: 50px;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 }
 
@@ -48,8 +47,8 @@ input[type="checkbox"] {
   text-align: start;
   margin-top: 15px;
   margin-bottom: 15px;
-  position: relative;
-  overflow: hidden;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .recipe img {
@@ -82,7 +81,6 @@ input[type="checkbox"] {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: auto;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;

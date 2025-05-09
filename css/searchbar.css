@@ -1,14 +1,14 @@
-#searchbar_UL {
+#searchbar_section {
   list-style-type: none;
   padding: 0;
   margin: 0;
   position: absolute;
 }
 
-#searchbar_UL li a {
+#searchbar_section figcaption {
   border: 2px solid #832612;
-  border-radius: 10px;
-  margin-top: -1px; /* Prevent double borders */
+  border-radius: 20px;
+  /* margin-top: -1px; Prevent double borders */
   background-color: #ffd89a;
   padding: 12px;
   text-decoration: none;
@@ -17,10 +17,12 @@
   display: block;
 }
 
-#searchbar_UL li a:hover:not(.header) {
+#searchbar_section figcaption:hover:not(.header) {
   background-color: #ecc687;
 }
-
+#searchbar_section figure {
+  margin: 3px 0px 0px 0px;
+}
 #searchbar_Input {
   background-position: 10px 12px;
   background-repeat: no-repeat;
@@ -33,6 +35,48 @@
   border-radius: 10px;
 }
 
-::placeholder {
+#searchbar_div ::placeholder {
   color: #832612;
+  opacity: 40%;
+}
+
+.website {
+  text-decoration: none;
+  color: black;
+}
+.website figcaption {
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.searchbar_button {
+  border: none;
+  padding: 0;
+  background-color: #ffd89a;
+  margin-top: 5px;
+}
+.searchbar_button:hover {
+  cursor: pointer;
+}
+
+#icon-switch {
+  height: 40px;
+  width: 42px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20px;
+}
+
+#icon-switch svg:last-child {
+  display: none;
+}
+
+.searchbarActive #icon-switch svg:first-child {
+  display: none;
+}
+
+.searchbarActive #icon-switch svg:last-child {
+  display: block;
 }

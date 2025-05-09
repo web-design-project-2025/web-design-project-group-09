@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("form");
   const errorMessage = document.getElementById("error-message");
 
+
   form.addEventListener("submit", async function (e) {
+
+
     e.preventDefault();
 
     const email = document.getElementById("email-input").value.trim();
@@ -13,11 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+
     const hashedPassword = await hashPassword(password);
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     const user = users.find(
       (u) => u.email === email && u.password === hashedPassword
+
     );
 
     if (user) {
@@ -27,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
       showSuccess("Login successful! Redirecting...");
 
       setTimeout(() => {
-        window.location.href = "profile.html";
+
+        window.location.href = "profile.html"; // redirect after login
+
       }, 1500);
     } else {
       showError("Invalid email or password.");
@@ -44,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessage.textContent = msg;
   }
 
+
   // Function to hash string with SHA-256
   async function hashPassword(password) {
     const encoder = new TextEncoder();
@@ -55,4 +63,5 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
     return hashHex;
   }
+
 });

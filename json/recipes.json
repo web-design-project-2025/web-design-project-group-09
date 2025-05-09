@@ -2,22 +2,45 @@
     {
         "id": 1,
         "name": "Bacon Pancakes",
+        "image": "img/bacon-pancakes-1.png",
+        "hoverImage": "img/bacon-pancakes-2.png",
         "category": "meals",
         "media": "animated-media",
-        "preferences": []
+        "preferences": [],
+        "rating": 5,
+        "time": "40 minutes",
+        "ingredients": [
+            "2 cups all-purpose flour",
+            "1 tablespoon baking powder",
+            "1/2 teaspoon salt",
+            "2 tablespoons sugar",
+            "2 cups milk",
+            "2 large eggs",
+            "4 strips of bacon, cooked and crumbled"
+        ]
       },
+
       {
         "id": 2,
         "name": "Senku Cola",
+        "image": "img/cola-1.png",
+        "hoverImage": "img/cola-2.png",
         "category": "drinks",
         "media": ["print-media", "animated-media"],
-        "preferences": ["vegetarian", "dairy-free", "gluten-free"]
+        "preferences": ["vegetarian", "dairy-free", "gluten-free"],
+        "rating": 5,
+        "time": "10 minutes"
       },
+
       {
         "id": 3,
         "name": "Bloom Into You Cheesecake",
+        "image": "img/bloom-cheesecake-1.jpg",
+        "hoverImage": "img/bloom-cheesecake-2.png",
         "category": "desserts",
         "media": ["print-media", "animated-media"],
-        "preferences": "vegetarian"
+        "preferences": ["vegetarian"],
+        "rating": 5,
+        "time": "1 hour"
       }
 ]
