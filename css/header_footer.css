@@ -6,14 +6,22 @@ body {
 }
 .main {
   flex: 1;
-  margin-top: 200px;
+  padding-top: 168px;
 }
 
 /* Header part */
 
 .header {
   background-color: #ffd89a;
-  position: absolute;
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.header-hidden {
+  transform: translateY(-100%);
 }
 .nav_header {
   display: grid;
@@ -36,9 +44,10 @@ body {
   padding-right: 20px;
   margin: 0pt;
   background-color: #ffd89a;
+  justify-self: end;
 }
 .txt_header {
-  font-size: 28pt;
+  font-size: 20pt;
   color: #832612;
   padding: 30pt;
 }
@@ -144,5 +153,11 @@ ul {
 @media screen and (max-width: 1195px) {
   .nav_header {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .main {
+    padding-top: 240px;
+  }
+  .ul_header_logo {
+    justify-content: center;
   }
 }
