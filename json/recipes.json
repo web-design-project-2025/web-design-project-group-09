@@ -9,15 +9,22 @@
         "preferences": [],
         "rating": 5,
         "time": "40 minutes",
+        "nutrition": [
+          "Protein - 8.4 g ",
+          "Fats - 19 g ",
+          "Carbs - 56 g",
+          "Sodium - 600 mg ",
+          "Cholesterol - 220 mg "
+  ],
         "ingredients": [
-            "All-purpose flour - 125 g",
-            "Baking powdeer - 10 g",
-            "Granulated sugar - 25 g",
-            "Salt - 1 g",
-            "Milk - 240 ml",
-            "Eggs - 1",
-            "Melted butter (or neutral oil, like sunflower/canola) - 30 g",
-            "4 strips of bacon"
+          "All-purpose flour - 125 g",
+          "Baking powdeer - 10 g",
+          "Granulated sugar - 25 g",
+          "Salt - 1 g",
+          "Milk - 240 ml",
+          "Eggs - 1",
+          "Melted butter (or neutral oil, like sunflower/canola) - 30 g",
+          "4 strips of bacon"
         ],
         "directions": [
           { 
@@ -54,10 +61,10 @@
         "rating": 5,
         "time": "10 minutes",
         "ingredients": [
-            "Dark Honey - 1 cup",
-            "Lime - 1",
-            "Cilantro - 2/3 cup",
-            "Carbonated Water - 8 oz"
+          "Dark Honey - 1 cup",
+          "Lime - 1",
+          "Cilantro - 2/3 cup",
+          "Carbonated Water - 8 oz"
         ],
         "directions": [
           { 
@@ -107,35 +114,35 @@
           "Lemon juice - 1/4 cup",
           "Butter - 1/2 cup"
       ],
-      "directions": [
-        { 
-          "title": "Preheat the oven to 340 F"
-        },
-        { 
-          "title": "Butter and Cookies",
-          "description": "Melt the butter on low heat, put the cookies into a plastic bag and finely crush them, then combine them with the melted butter.",
-          "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step2.png"
-        },
-        { 
-          "title": "Crust refrigeration",
-          "description": "Line the bottom of a 9” springform cake pan with parchment paper. Spoon in the mixture, press down with a flat object to spread evenly over the bottom of the pan, Place in the refrigerator to cool.",
-          "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step3.png"
-        },
-        { 
-          "title": "Mix the Batter",
-          "description": "In a large bowl, beat the cream cheese together with the eggs (Add the eggs one at a time until mixed in), cake flour (to prevent the cake flour from making lumps, pass it through a fine mesh strainer), heavy cream, lemon juice , vanilla and salt.",
-          "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step4.png"
-        },
-        { 
-          "title": "Combine Crust and Batter",
-          "description": "Remove the crust from the refrigerator and pour the mixture on top and spread evenly across.",
-          "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step5.png"
-        },
-        { 
-          "title": "Bake",
-          "description": "Place in the oven and bake for 30 minutes , reduce the temperature to 300 F and bake for 30 more minutes. Then turn off the heat and leave the cheesecake in the oven for 60 minutes. Let it cool completely.",
-          "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step6.png"
-        }
-      ]
+        "directions": [
+          { 
+            "title": "Preheat the oven to 340 F"
+          },
+          { 
+            "title": "Butter and Cookies",
+            "description": "Melt the butter on low heat, put the cookies into a plastic bag and finely crush them, then combine them with the melted butter.",
+            "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step2.png"
+          },
+          { 
+            "title": "Crust refrigeration",
+            "description": "Line the bottom of a 9” springform cake pan with parchment paper. Spoon in the mixture, press down with a flat object to spread evenly over the bottom of the pan, Place in the refrigerator to cool.",
+            "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step3.png"
+          },
+          { 
+            "title": "Mix the Batter",
+            "description": "In a large bowl, beat the cream cheese together with the eggs (Add the eggs one at a time until mixed in), cake flour (to prevent the cake flour from making lumps, pass it through a fine mesh strainer), heavy cream, lemon juice , vanilla and salt.",
+            "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step4.png"
+          },
+          { 
+            "title": "Combine Crust and Batter",
+            "description": "Remove the crust from the refrigerator and pour the mixture on top and spread evenly across.",
+            "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step5.png"
+          },
+          { 
+            "title": "Bake",
+            "description": "Place in the oven and bake for 30 minutes , reduce the temperature to 300 F and bake for 30 more minutes. Then turn off the heat and leave the cheesecake in the oven for 60 minutes. Let it cool completely.",
+            "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step6.png"
+          }
+        ]
       }
 ]

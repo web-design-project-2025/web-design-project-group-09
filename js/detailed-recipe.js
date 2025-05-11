@@ -15,7 +15,6 @@ async function loadRecipe() {
     if (recipe) {
       document.getElementById("detailed-recipe-title").innerText = recipe.name;
       document.getElementById("detailed-recipe-image").src = recipe.image;
-      document.getElementById("detailed-recipe-description").innerText = recipe.time;
 
       // Ingredients
       const ingredientsList = document.getElementById("ingredients-list");
@@ -32,6 +31,21 @@ async function loadRecipe() {
       ingredients += "</ul>";
       
       ingredientsList.innerHTML = ingredients;
+
+      // Nutrition
+      const nutritionList = document.getElementById("nutrition-list");
+      let nutrition = "<ul>";
+
+      // We check if the recipe has nutrition and if it is not empty
+      if (recipe.nutrition && recipe.nutrition.length > 0) {
+        for (let i = 0; i < recipe.nutrition.length; i++) {
+          nutrition += "<li>" + recipe.nutrition[i] + "</li>";
+        }
+      } 
+
+      nutrition += "</ul>";
+      nutritionList.innerHTML = nutrition;
+      
 
       // Directions
       const directionsContainer = document.getElementById("directions-container");
