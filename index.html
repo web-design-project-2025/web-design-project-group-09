@@ -18,9 +18,11 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/browse_section.css" />
     <link rel="stylesheet" href="css/colored_sections.css" />
+    <link rel="stylesheet" href="css/trending_section.css" />
     <script src="js/searchbar.js" defer></script>
     <script src="js/browse_section.js" defer></script>
     <script src="js/hide_header.js" defer></script>
+    <script src="js/trending_section.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -131,8 +133,14 @@
       <h1 class="ae_bd">this is Aeonik bold</h1>
       <p class="ae_rg">yadiyada <b class="ae_bd">bolded word</b> yadidaya</p>
 
+      <section class="trending">
+        <header class="trending_header">
+          <h2 class="trending_title h1_title">Trending Recipes</h2>
+        </header>
+        <div class="trending_div" id="trending_div"></div>
+      </section>
       <section class="item-carousel">
-        <h2 class="item-carousel-title h1_title">New Additions!</h2>
+        <h2 class="item-carousel-title h1_title">New Additions !</h2>
         <div class="carousel-container">
           <div class="carousel-line" id="carousel-line"></div>
           <button class="carousel-btn prev">
