@@ -1,0 +1,160 @@
+/* Main Layout */
+.recipe-page-layout {
+  display: flex;
+  margin: 40px 100px;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+/* Main Recipe Content */
+.main-recipe-content {
+  flex: 2.5;
+}
+
+.main-recipe-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#detailed-recipe-image {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+#detailed-recipe-description {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* Ingredients */
+#ingredients-list {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+/* Directions */
+#directions-container {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+#directions-container li {
+  background-color: #fff1e6;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+}
+
+#directions-container li strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#directions-container li img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebar-block {
+  background-color: #fff1e6;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.sidebar-block h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+/* Sidebar recipe links */
+.sidebar-block a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 15px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-block a:hover {
+  background-color: #ffe6cc;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.sidebar-block img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Social Links */
+.sidebar-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-block li {
+  margin-bottom: 10px;
+}
+
+.sidebar-block a {
+  font-weight: 500;
+}
+
+
+/*The idea to use css selector for ids was taken from here: https://www.w3schools.com/css/css_selectors.asp */
+/* Fix step number being outside the box */
+#directions-container {
+  list-style: none;
+  padding-left: 0;
+  /* The way how to use counter-reset was taken from here: https://www.youtube.com/watch?v=UKzXaztdeCc&ab_channel=RapidTutor */
+  counter-reset: step-counter;
+}
+
+#directions-container li {
+  counter-increment: step-counter;
+  position: relative;
+  background-color: #fff1e6;
+  padding: 20px 20px 20px 60px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+}
+
+#directions-container li::before {
+  content: counter(step-counter) ".";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#directions-container li img {
+  width: 80%;
+  max-width: 400px;
+  display: block;
+  margin: 15px auto 0 auto;
+  border-radius: 12px;
+}
+
+#detailed-recipe-image {
+  width: 500px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 25px;
+  border-radius: 12px;
+}

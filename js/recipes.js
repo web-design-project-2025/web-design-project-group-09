@@ -20,6 +20,7 @@ function renderRecipes() {
 function createRecipeElement(recipe) {
   // Create the link element
   var link = document.createElement("a");
+  //instead of hardcoding the link, we can use the recipe id to create a dynamic link so this allows us to have a single page for all recipes and just change the id based on the recipe number
   link.href = "detailed-recipe.html?id=" + recipe.id;
 
   // Create the figure element
@@ -131,6 +132,7 @@ function filterRecipes() {
     // If a category is selected, check if the recipe's category matches any of the selected categories
     let matchesCategory = true;
     if (selectedCategories.length > 0) {
+      // The idea to use Array.isArray is to check if the recipe.category is an array or a string 
       if (Array.isArray(recipe.category)) {
         matchesCategory = false;
         for (let j = 0; j < selectedCategories.length; j++) {
