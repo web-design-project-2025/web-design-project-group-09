@@ -11,9 +11,11 @@ async function loadSectionItems() {
 function renderSectionItems() {
   itemsContainer.innerHTML = "";
 
-  for (let item of items) {
-    const itemElement = createItemElement(item);
-    itemsContainer.appendChild(itemElement);
+  for (i = 0; i < 3; i++) {
+    for (let item of items) {
+      const itemElement = createItemElement(item);
+      itemsContainer.appendChild(itemElement);
+    }
   }
 }
 
@@ -44,30 +46,58 @@ function setupCarousel() {
   var prevBtn = document.querySelector(".carousel-btn.prev");
   var nextBtn = document.querySelector(".carousel-btn.next");
 
-  var index = 0;
   var totalAmount = track.children.length;
+  var index = totalAmount / 3;
   console.log(totalAmount);
   var carouselItem = track.querySelector(".carousel_item");
   var itemWidth = carouselItem.offsetWidth + 16;
 
   var shownItems = 4;
 
+  var scrollItems = index * itemWidth;
+  console.log(scrollItems);
+  track.style.transform = "translateX(-" + scrollItems + "px)";
+
   function updateCarousel() {
-    var scrollItems = index * itemWidth;
+    console.log(index);
+    scrollItems = index * itemWidth;
     track.style.transform = "translateX(-" + scrollItems + "px)";
   }
 
   nextBtn.addEventListener("click", function () {
-    if (index < totalAmount - shownItems) {
+    if (index == (2 / 3) * totalAmount - 1) {
       index = index + 1;
       updateCarousel();
+      setTimeout(function () {
+        index = totalAmount / 3;
+        track.classList.remove("anim-normal");
+        updateCarousel();
+      }, 500);
+    } else {
+      if (index < totalAmount - (1 / 3) * totalAmount) {
+        track.classList.add("anim-normal");
+        index = index + 1;
+
+        updateCarousel();
+      }
     }
   });
 
   prevBtn.addEventListener("click", function () {
-    if (index > 0) {
+    if (index == 1) {
       index = index - 1;
       updateCarousel();
+      setTimeout(function () {
+        index = totalAmount / 3;
+        track.classList.remove("anim-normal");
+        updateCarousel();
+      }, 500);
+    } else {
+      if (index > 1) {
+        track.classList.add("anim-normal");
+        index = index - 1;
+        updateCarousel();
+      }
     }
   });
 }
