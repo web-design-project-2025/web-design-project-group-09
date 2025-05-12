@@ -1,23 +1,36 @@
 .recipe-page-layout {
   display: flex;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 90px;
   margin: 40px 100px;
   align-items: flex-start;
 }
 
 /* Left side */
 .left-column {
-  flex: 2.5;
+  width: 70%;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
 .main-image-box img {
-  width: 700px;
+  width: 34%;
   border-radius: 12px;
 }
+
+/* Extra tip */
+.extra-tip-box {
+  background-color: #fff1e6;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.extra-tip-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 
 /* Directions */
 .directions-block {
@@ -43,6 +56,14 @@
   border-radius: 15px;
 }
 
+#directions-container li strong {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
 #directions-container li::before {
   content: counter(step-counter) ".";
   position: absolute;
@@ -64,6 +85,14 @@
   font-size: 2rem;
   margin-bottom: 10px;
 }
+
+#directions-container li img {
+  width: 30%; 
+  border-radius: 12px;
+  margin-top: 10px;
+  display: block;
+}
+
 
 /* Nutrition and Ingredients */
 .nutrition-ingredients-box {

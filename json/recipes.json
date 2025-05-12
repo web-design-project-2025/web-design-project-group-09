@@ -4,6 +4,7 @@
         "name": "Bacon Pancakes",
         "image": "img/bacon-pancakes-1.png",
         "hoverImage": "img/bacon-pancakes-2.png",
+        "tip": "suck my ass bro i hate coding",
         "category": "meals",
         "media": "animated-media",
         "preferences": [],
@@ -24,7 +25,7 @@
           "Milk - 240 ml",
           "Eggs - 1",
           "Melted butter (or neutral oil, like sunflower/canola) - 30 g",
-          "4 strips of bacon"
+          "Bacon - 4 strips"
         ],
         "directions": [
           { 

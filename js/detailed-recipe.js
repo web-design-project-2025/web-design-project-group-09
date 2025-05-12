@@ -47,6 +47,15 @@ async function loadRecipe() {
       nutritionList.innerHTML = nutrition;
       
 
+      // Extra tip
+      const tipBox = document.getElementById("extra-tip-box");
+      const tipText = document.getElementById("extra-tip");
+
+      if (recipe.tip && recipe.tip.length > 0) {
+        tipBox.style.display = "block";
+        tipText.innerText = recipe.tip;
+      }
+
       // Directions
       const directionsContainer = document.getElementById("directions-container");
       let directions = "";
