@@ -61,11 +61,18 @@
         "preferences": ["vegetarian", "dairy-free", "gluten-free"],
         "rating": 5,
         "time": "10 minutes",
+        "nutrition": [
+          { "name": "Protein", "quantity": 13, "unit": "g" },
+          { "name": "Fats", "quantity": 50, "unit": "g" },
+          { "name": "Carbs", "quantity": 56, "unit": "g" },
+          { "name": "Sodium", "quantity": 580, "unit": "mg" },
+          { "name": "Cholesterol", "quantity": 220, "unit": "mg" }
+        ],
         "ingredients": [
-          "Dark Honey - 1 cup",
-          "Lime - 1",
-          "Cilantro - 2/3 cup",
-          "Carbonated Water - 8 oz"
+          { "name": "Dark Honey", "quantity": 240, "unit": "ml" },
+          { "name": "Lime", "quantity": 1, "unit": "piece" },
+          { "name": "Cilantro", "quantity": 160, "unit": "ml" },
+          { "name": "Carbonated Water", "quantity": 240, "unit": "ml" }
         ],
         "directions": [
           { 
@@ -103,17 +110,25 @@
         "preferences": ["vegetarian"],
         "rating": 5,
         "time": "1 hour",
+        "nutrition": [
+          { "name": "Protein", "quantity": 44, "unit": "g" },
+          { "name": "Fats", "quantity": 300, "unit": "g" },
+          { "name": "Carbs", "quantity": 180, "unit": "g" },
+          { "name": "Sodium", "quantity": 3340, "unit": "mg" },
+          { "name": "Cholesterol", "quantity": 1280, "unit": "mg" }
+        ],
         "ingredients": [
-          "Cream cheese - 16 oz",
-          "Heavy creame - 2/3 cup",
-          "Granulated sugar - 2/3 g",
-          "Eggs - 2",
-          "Cake flour - 1/2 cup",
-          "Cookies - 2 cups, crushed (vanilla wafers or graham crackers)",
-          "Vanilla extract - 1 tsp",
-          "Salt - 1/4 tsp",
-          "Lemon juice - 1/4 cup",
-          "Butter - 1/2 cup"
+          { "name": "Cream cheese", "quantity": 454, "unit": "g" },
+          { "name": "Heavy cream", "quantity": 160, "unit": "ml" },
+          { "name": "Granulated sugar", "quantity": 134, "unit": "g" },
+          { "name": "Eggs", "quantity": 2, "unit": "pieces" },
+          { "name": "Cake flour", "quantity": 60, "unit": "g" },
+          { "name": "Cookies (crushed)", "quantity": 240, "unit": "g" },
+          { "name": "Vanilla extract", "quantity": 5, "unit": "ml" },
+          { "name": "Salt", "quantity": 1.25, "unit": "ml" },
+          { "name": "Lemon juice", "quantity": 60, "unit": "ml" },
+          { "name": "Butter", "quantity": 113, "unit": "g" }
+
       ],
         "directions": [
           { 
