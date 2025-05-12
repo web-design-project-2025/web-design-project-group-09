@@ -11,11 +11,11 @@
         "rating": 5,
         "time": "40 minutes",
         "nutrition": [
-          "Protein - 8.4 g ",
-          "Fats - 19 g ",
-          "Carbs - 56 g",
-          "Sodium - 600 mg ",
-          "Cholesterol - 220 mg "
+          { "name": "Protein", "quantity": 8.4, "unit": "g" },
+          { "name": "Fats", "quantity": 19, "unit": "g" },
+          { "name": "Carbs", "quantity": 56, "unit": "g" },
+          { "name": "Sodium", "quantity": 600, "unit": "mg" },
+          { "name": "Cholesterol", "quantity": 220, "unit": "mg" }
   ],
         "ingredients": [
           { "name": "All-purpose flour", "quantity": 125, "unit": "g" },

@@ -21,20 +21,7 @@ async function loadRecipe() {
     document.getElementById("detailed-recipe-image").src = recipe.image;
 
     renderIngredients(1);
-
-    // Nutrition
-    const nutritionList = document.getElementById("nutrition-list");
-    let nutrition = "<ul>";
-
-    // We check if the recipe has nutrition and if it is not empty
-    if (recipe.nutrition && recipe.nutrition.length > 0) {
-      for (let i = 0; i < recipe.nutrition.length; i++) {
-        nutrition += "<li>" + recipe.nutrition[i] + "</li>";
-      }
-    }
-
-    nutrition += "</ul>";
-    nutritionList.innerHTML = nutrition;
+    renderNutrition(1);
 
     // Extra tip
     const tipBox = document.getElementById("extra-tip-box");
@@ -81,7 +68,7 @@ async function loadRecipe() {
   }
 }
 
-// Function to render the ingredients list
+// Rendering the ingredients list
 // This function takes the number of servings as an argument and updates the ingredients list accordingly
 // The ingredients are multiplied by the number of servings
 function renderIngredients(servings = 1) {
@@ -89,15 +76,31 @@ function renderIngredients(servings = 1) {
   let ingredientsHTML = "";
 
   currentRecipe.ingredients.forEach((ingredient) => {
+    // We multiple the base quantity by the sekected number of servings which is a number wso we can use it directly
     const total = ingredient.quantity * servings;
-    ingredientsHTML += `<li>${ingredient.name} - ${total} ${ingredient.unit}</li>`;
+    ingredientsHTML += `<li>${ingredient.name}: ${total} ${ingredient.unit}</li>`;
   });
 
   ingredientsList.innerHTML = ingredientsHTML;
 }
 
-function updateIngredients(servings) {
+// Rendering the nutrition list
+// It uses teh same principles as the renderIngredients function
+function renderNutrition(servings = 1) {
+  const nutritionList = document.getElementById("nutrition-list");
+  let nutritionHTML = "";
+
+  currentRecipe.nutrition.forEach((nutrition) => {
+    const total = nutrition.quantity * servings;
+    nutritionHTML += `<li>${nutrition.name}: ${total} ${nutrition.unit}</li>`;
+  });
+
+  nutritionList.innerHTML = nutritionHTML;
+}
+
+function updateServings(servings) {
   renderIngredients(servings);
+  renderNutrition(servings);
 }
 
 loadRecipe();
