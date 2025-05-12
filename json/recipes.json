@@ -18,14 +18,14 @@
           "Cholesterol - 220 mg "
   ],
         "ingredients": [
-          "All-purpose flour - 125 g",
-          "Baking powdeer - 10 g",
-          "Granulated sugar - 25 g",
-          "Salt - 1 g",
-          "Milk - 240 ml",
-          "Eggs - 1",
-          "Melted butter (or neutral oil, like sunflower/canola) - 30 g",
-          "Bacon - 4 strips"
+          { "name": "All-purpose flour", "quantity": 125, "unit": "g" },
+          { "name": "Baking powder", "quantity": 10, "unit": "g" },
+          { "name": "Granulated sugar", "quantity": 25, "unit": "g" },
+          { "name": "Salt", "quantity": 1, "unit": "g" },
+          { "name": "Milk", "quantity": 240, "unit": "ml" },
+          { "name": "Eggs", "quantity": 1, "unit": "" },
+          { "name": "Melted butter (or neutral oil, like sunflower/canola)", "quantity": 30, "unit": "g" },
+          { "name": "Bacon", "quantity": 4, "unit": "strips" }
         ],
         "directions": [
           { 

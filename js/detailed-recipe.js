@@ -1,95 +1,103 @@
+let currentRecipe = null;
+
 async function loadRecipe() {
-    const params = new URLSearchParams(document.location.search);
-    const id = params.get("id");
-  
-    const response = await fetch('json/recipes.json');
-    const data = await response.json();
-  
-    // Find the recipe with the given id
-    // The idea to use find() was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-    // The find() method gives the recipe that matches the condition
+  const params = new URLSearchParams(document.location.search);
+  const id = params.get("id");
 
-    // We use == to allow for both string and number comparison because the id in the URL is a string and the id in the JSON is a number
-    const recipe = data.find(r => r.id == id);
-  
-    if (recipe) {
-      document.getElementById("detailed-recipe-title").innerText = recipe.name;
-      document.getElementById("detailed-recipe-image").src = recipe.image;
+  const response = await fetch("json/recipes.json");
+  const data = await response.json();
 
-      // Ingredients
-      const ingredientsList = document.getElementById("ingredients-list");
-      let ingredients = "<ul>";
-      
-      // We check if the recipe has ingredients and if it is not empty
-      if (recipe.ingredients && recipe.ingredients.length > 0) {
-        // The next lines of code were adapted from this video: https://www.youtube.com/watch?v=Zrte7QVPuLY&ab_channel=DanProgramming
-        for (let i = 0; i < recipe.ingredients.length; i++) {
-          ingredients += "<li>" + recipe.ingredients[i] + "</li>";
-        }
+  // Find the recipe with the given id
+  // The idea to use find() was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+  // The find() method gives the recipe that matches the condition
+
+  // We use == to allow for both string and number comparison because the id in the URL is a string and the id in the JSON is a number
+  const recipe = data.find((r) => r.id == id);
+
+  if (recipe) {
+    currentRecipe = recipe;
+
+    document.getElementById("detailed-recipe-title").innerText = recipe.name;
+    document.getElementById("detailed-recipe-image").src = recipe.image;
+
+    renderIngredients(1);
+
+    // Nutrition
+    const nutritionList = document.getElementById("nutrition-list");
+    let nutrition = "<ul>";
+
+    // We check if the recipe has nutrition and if it is not empty
+    if (recipe.nutrition && recipe.nutrition.length > 0) {
+      for (let i = 0; i < recipe.nutrition.length; i++) {
+        nutrition += "<li>" + recipe.nutrition[i] + "</li>";
       }
-      
-      ingredients += "</ul>";
-      
-      ingredientsList.innerHTML = ingredients;
-
-      // Nutrition
-      const nutritionList = document.getElementById("nutrition-list");
-      let nutrition = "<ul>";
-
-      // We check if the recipe has nutrition and if it is not empty
-      if (recipe.nutrition && recipe.nutrition.length > 0) {
-        for (let i = 0; i < recipe.nutrition.length; i++) {
-          nutrition += "<li>" + recipe.nutrition[i] + "</li>";
-        }
-      } 
-
-      nutrition += "</ul>";
-      nutritionList.innerHTML = nutrition;
-      
-
-      // Extra tip
-      const tipBox = document.getElementById("extra-tip-box");
-      const tipText = document.getElementById("extra-tip");
-
-      if (recipe.tip && recipe.tip.length > 0) {
-        tipBox.style.display = "block";
-        tipText.innerText = recipe.tip;
-      }
-
-      // Directions
-      const directionsContainer = document.getElementById("directions-container");
-      let directions = "";
-
-      if (recipe.directions && recipe.directions.length > 0) {
-        for (let i = 0; i < recipe.directions.length; i++) {
-          // We call step the current step of the recipe for better readability
-          const step = recipe.directions[i];
-          directions += "<li>";
-
-          // Step title
-          if (recipe.directions[i].title) {
-            directions += "<strong>" + step.title + "</strong><br>";
-          }
-
-          // Step description
-          if (step.description) {
-            directions += "<p>" + step.description + "</p>";
-          }
-
-          if (step.image) {
-            // The image property is optional, so we check if it exists before using it
-            directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
-          }
-          directions += "</li>";
-        }
-      }
-
-      directionsContainer.innerHTML = directions;
-
-    } else {
-        // In case, there is no recipe with the given id, we show a default message
-      document.getElementById("detailed-recipe-title").innerText = "Recipe not found";
     }
+
+    nutrition += "</ul>";
+    nutritionList.innerHTML = nutrition;
+
+    // Extra tip
+    const tipBox = document.getElementById("extra-tip-box");
+    const tipText = document.getElementById("extra-tip");
+
+    if (recipe.tip && recipe.tip.length > 0) {
+      tipBox.style.display = "block";
+      tipText.innerText = recipe.tip;
+    }
+
+    // Directions
+    const directionsContainer = document.getElementById("directions-container");
+    let directions = "";
+
+    if (recipe.directions && recipe.directions.length > 0) {
+      for (let i = 0; i < recipe.directions.length; i++) {
+        // We call step the current step of the recipe for better readability
+        const step = recipe.directions[i];
+        directions += "<li>";
+
+        // Step title
+        if (recipe.directions[i].title) {
+          directions += "<strong>" + step.title + "</strong><br>";
+        }
+
+        // Step description
+        if (step.description) {
+          directions += "<p>" + step.description + "</p>";
+        }
+
+        if (step.image) {
+          // The image property is optional, so we check if it exists before using it
+          directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
+        }
+        directions += "</li>";
+      }
+    }
+
+    directionsContainer.innerHTML = directions;
+  } else {
+    // In case, there is no recipe with the given id, we show a default message
+    document.getElementById("detailed-recipe-title").innerText =
+      "Recipe not found";
   }
-  
-  loadRecipe();
+}
+
+// Function to render the ingredients list
+// This function takes the number of servings as an argument and updates the ingredients list accordingly
+// The ingredients are multiplied by the number of servings
+function renderIngredients(servings = 1) {
+  const ingredientsList = document.getElementById("ingredients-list");
+  let ingredientsHTML = "";
+
+  currentRecipe.ingredients.forEach((ingredient) => {
+    const total = ingredient.quantity * servings;
+    ingredientsHTML += `<li>${ingredient.name} - ${total} ${ingredient.unit}</li>`;
+  });
+
+  ingredientsList.innerHTML = ingredientsHTML;
+}
+
+function updateIngredients(servings) {
+  renderIngredients(servings);
+}
+
+loadRecipe();

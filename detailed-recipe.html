@@ -158,12 +158,19 @@
     <div class="right-column">
       <h1 id="detailed-recipe-title">Recipe Title</h1>
 
+      <div class="serving-buttons">
+        <button onclick="updateIngredients(1)">1 Serving</button>
+        <button onclick="updateIngredients(2)">2 Servings</button>
+        <button onclick="updateIngredients(4)">4 Servings</button>
+      </div>
+
       <div class="nutrition-ingredients-box">
         <div class="nutrition-ingredients">
           <div class="nutrition">
             <h3>Nutrition</h3>
             <ul id="nutrition-list"></ul>
           </div>
+
           <div class="ingredients">
             <h3>Ingredients</h3>
             <ul id="ingredients-list"></ul>
