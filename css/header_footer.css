@@ -47,12 +47,40 @@ body {
   justify-self: end;
 }
 .txt_header {
-  font-size: 20pt;
+  font-size: 16pt;
   color: #832612;
   padding: 30pt;
+  white-space: nowrap;
 }
 .txt-deco-none {
   text-decoration: none;
+}
+
+.header-btn-login {
+  color: #fff1e6;
+  border-color: #292929;
+  border-radius: 0;
+  padding: 15px 18px;
+  text-transform: uppercase;
+  background-color: #832612;
+}
+.header-btn-login:hover {
+  background-color: #6a2010;
+}
+
+.header-btn-signup {
+  margin-right: 5px;
+  border-style: solid;
+  border-color: #832612;
+  border-radius: 0;
+  border-width: 4px;
+  padding: 11px 16px;
+  text-transform: uppercase;
+}
+.header-btn-signup:hover {
+  border-color: #6a2010;
+  color: #fff1e6;
+  background-color: #6a2010;
 }
 /* .logo-padding {
   padding-left: 15px;
