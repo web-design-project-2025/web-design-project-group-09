@@ -34,6 +34,7 @@ function createtrendingElement(trendingItem) {
   img.setAttribute("alt", trendingItem.alt);
   img.classList.add("trending_img");
   texth2.classList.add("trending_text");
+  texth2.classList.add("ae_bd");
   span.innerText = trendingItem.name;
 
   texth2.appendChild(span);
