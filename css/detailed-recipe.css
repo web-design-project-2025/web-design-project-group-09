@@ -87,25 +87,22 @@
 }
 
 .serving-buttons button {
-  margin-right: 10px;
-  padding: 6px 12px;
+  padding: 10px 20px;
   font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  background-color: #ffe6cc;
+  border: 3px solid #832612;
+  border-radius: 10px;
+  background-color: #fff1e6;
+  color: black;
   cursor: pointer;
 }
 
 .serving-buttons button:hover {
-  background-color: #ffcc99;
+  background-color: #832612;
+  color: #fff1e6; 
 }
 
 
 
-#detailed-recipe-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
 
 #directions-container li img {
   width: 30%; 
