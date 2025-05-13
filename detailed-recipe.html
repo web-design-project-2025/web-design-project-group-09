@@ -136,59 +136,73 @@
     </header>
     <main id="detailed-recipe-container">
       <div class="recipe-page-layout">
-        <section class="main-recipe-content">
-          <h1 id="detailed-recipe-title">Loading...</h1>
-          <img id="detailed-recipe-image" src="" alt="Recipe image" />
-          <p id="detailed-recipe-description"></p>
 
-          <!-- Ingredients section -->
-          <h2>Ingredients</h2>
-          <ul id="ingredients-list"></ul>
-
-          <!-- Directions section -->
-          <h2>Directions</h2>
-          <ol id="directions-container"></ol>
-        </section>
-
-        <!-- Right side bar -->
-        <!-- The idea to use aside was taken from this website: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/aside-->
-        <aside class="sidebar">
-          <div class="sidebar-block">
-            <h3>Latest Recipes</h3>
-            <a href="detailed-recipe.html?id=1">
-              <img src="img/bacon-pancakes-1.png" alt="Bacon Pancakes">
-              <p>Bacon Pancakes</p>
-            </a>
-            <a href="detailed-recipe.html?id=1">
-              <img src="img/bacon-pancakes-1.png" alt="Bacon Pancakes">
-              <p>Bacon Pancakes</p>
-            </a>    
-            <a href="detailed-recipe.html?id=1">
-              <img src="img/bacon-pancakes-1.png" alt="Bacon Pancakes">
-              <p>Bacon Pancakes</p>
-            </a>         
-          </div>
-
-          <div class="sidebar-block">
-            <h3>Trending Recipes</h3>
-            <div id="trending-recipes"></div>
-            <a href="detailed-recipe.html?id=1">
-              <img src="img/bacon-pancakes-1.png" alt="Bacon Pancakes">
-              <p>Bacon Pancakes</p>
-            </a> 
-          </div>
-
-          <div class="sidebar-block">
-            <h3>Follow us</h3>
-            <div class="sidebar-social-links"></div>
-            <ul>
-              <li><a href="#">E-Mail</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-          </div>
-        </aside>
+    <!-- LEFT COLUMN -->
+    <div class="left-column">
+      <div class="main-image-box">
+      <img id="detailed-recipe-image" src="" alt="Recipe image" />
       </div>
+
+      <div class="extra-tip-box" id="extra-tip-box" style="display: none;">
+        <h2>Extra Tip</h2>
+        <p id="extra-tip"></p>
+      </div>
+
+      <div class="directions-block">
+        <h2>Directions</h2>
+        <ol id="directions-container"></ol>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-column">
+      <h1 id="detailed-recipe-title">Recipe Title</h1>
+
+      <div class="serving-buttons">
+        <button onclick="updateServings(1)">1 Serving</button>
+        <button onclick="updateServings(2)">2 Servings</button>
+        <button onclick="updateServings(4)">4 Servings</button>
+      </div>
+
+      <div class="nutrition-ingredients-box">
+        <div class="nutrition-ingredients">
+          <div class="nutrition">
+            <h3>Nutrition</h3>
+            <ul id="nutrition-list"></ul>
+          </div>
+
+          <div class="ingredients">
+            <h3>Ingredients</h3>
+            <ul id="ingredients-list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-block">
+        <h3>Latest Recipes</h3>
+        <a href="#"><img src="img/bacon-pancakes-1.png" alt=""><p>Bacon Pancakes</p></a>
+        <a href="#"><img src="img/bacon-pancakes-1.png" alt=""><p>Bacon Pancakes</p></a>
+        <a href="#"><img src="img/bacon-pancakes-1.png" alt=""><p>Bacon Pancakes</p></a>
+      </div>
+
+      <div class="sidebar-block">
+        <h3>Trending Recipes</h3>
+        <a href="#"><img src="img/bacon-pancakes-1.png" alt=""><p>Bacon Pancakes</p></a>
+      </div>
+
+      <div class="sidebar-block">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
     </main>
+
     <footer>
       <section class="footer-container">
         <section class="row">
