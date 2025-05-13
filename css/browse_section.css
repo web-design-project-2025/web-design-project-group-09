@@ -1,5 +1,27 @@
 .item-carousel {
   padding: 3rem 0rem 3rem 1rem;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 65px;
+  max-width: 1168px;
+}
+.item-carousel header {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.item-carousel header h2 {
+  position: relative;
+}
+
+.item-carousel header h2::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 22px);
+  top: calc(50% - 1.5px);
+  height: 3px;
+  width: 100vw;
+  background-color: #832612;
 }
 
 .item-carousel-title {
@@ -15,8 +37,11 @@
 
 #carousel-line {
   display: flex;
-  transition: transform 0.5s ease;
   gap: 1rem;
+}
+.anim-normal {
+  transition: transform 0.5s ease;
+  /* transition: transform step-end; */
 }
 
 .carousel_item {
@@ -38,12 +63,12 @@
 
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 39%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   border: none;
-  padding: 1rem;
+  padding: 0.5rem;
   cursor: pointer;
   z-index: 1;
   border-radius: 50%;
