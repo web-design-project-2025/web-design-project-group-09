@@ -26,12 +26,32 @@ html {
   color: var(--text-color);
   text-align: center;
 }
+.test {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
 
-.wrapper {
+  width: max(800px);
+}
+.test2 {
   margin: 0 auto;
+  max-width: 1380px;
+}
+.uni1 {
+  align-content: center;
+  padding: 0;
+  margin: 0;
+  margin-right: -32px;
+}
+.uni2 {
+  align-content: center;
+  padding: 0;
+  margin: 0;
+  /* margin-right: -32px; */
+}
+.wrapper {
   background-color: var(--input-color);
   min-height: 200vh;
-  width: max(800px);
+  /* width: max(800px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,7 +148,7 @@ a:hover {
 }
 
 @media (max-width: 1000px) {
-  .wrapper {
+  .test {
     width: max(400px, 100%);
   }
 }
