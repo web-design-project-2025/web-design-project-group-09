@@ -179,3 +179,25 @@
 .sidebar-block li {
   margin-bottom: 10px;
 }
+
+
+.content-columns {
+  display: flex;
+  gap: 60px;
+  position: relative;
+}
+
+/* Vertical line */
+.content-columns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #832612;
+  opacity: 0.6;
+
+  /* Putting the line in the middle between the rght and left columns */
+  /* Since the gap between the left and right coumns is 60 x, we will use 30px to adjust its position */
+  left: calc(70% + 30px);
+}
