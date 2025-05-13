@@ -55,6 +55,9 @@ body {
 .txt-deco-none {
   text-decoration: none;
 }
+.txt_black {
+  color: black;
+}
 
 .header-btn-login {
   color: #fff1e6;
