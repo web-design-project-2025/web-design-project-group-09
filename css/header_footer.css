@@ -90,6 +90,28 @@ body {
   padding-top: 15px;
 } */
 
+#auth-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#auth-controls span {
+  color: var(--text-color);
+}
+#auth-controls button {
+  color: #fff1e6;
+  border-color: #292929;
+  border-radius: 0;
+  padding: 15px 18px;
+  text-transform: uppercase;
+  background-color: #832612;
+  font: inherit;
+}
+
+#auth-controls button:hover {
+  background-color: #6a2010;
+}
+
 /* Footer part */
 footer {
   min-height: 50px;
