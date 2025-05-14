@@ -6,7 +6,7 @@ Implements UX and UI design while showcasing programming knowledge with Javascri
 Bacon Pancakes is a simple but clean website to search for recipes from your favorite Movies, TV Shows, Games, Anime, Books etc. 
 Using filtering for different recipes and user friendly design with taking accessibility into account.
 
-##Team Members
+## Team Members
 - Armando Rossmann
 - Peri Muhtaroğlu
 - Elina Asratyan
