@@ -95,9 +95,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-#auth-controls span {
-  color: var(--text-color);
-}
+
 #auth-controls button {
   color: #fff1e6;
   border-color: #292929;
@@ -110,6 +108,14 @@ body {
 
 #auth-controls button:hover {
   background-color: #6a2010;
+}
+
+#auth-controls a {
+  text-decoration: none;
+}
+
+#auth-controls a:hover {
+  text-decoration: underline;
 }
 
 /* Footer part */

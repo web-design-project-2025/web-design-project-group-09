@@ -14,7 +14,7 @@
 }
 
 .main-image-box img {
-  width: 34%;
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -30,7 +30,6 @@
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 
 /* Directions */
 .directions-block {
@@ -98,19 +97,15 @@
 
 .serving-buttons button:hover {
   background-color: #832612;
-  color: #fff1e6; 
+  color: #fff1e6;
 }
 
-
-
-
 #directions-container li img {
-  width: 30%; 
+  width: 30%;
   border-radius: 12px;
   margin-top: 10px;
   display: block;
 }
-
 
 /* Nutrition and Ingredients */
 .nutrition-ingredients-box {
@@ -179,7 +174,6 @@
 .sidebar-block li {
   margin-bottom: 10px;
 }
-
 
 .content-columns {
   display: flex;

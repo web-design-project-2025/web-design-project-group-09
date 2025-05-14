@@ -107,18 +107,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (user) {
     authControls.innerHTML = `
-      <span>Welcome, ${user.username}!</span>
-      <button id="logout-btn" style="margin-left: 10px;">Logout</button>
-    `;
-
+     <a href="profile.html" class="txt-deco-none txt_header ae_bd">
+    Welcome, ${user.username}
+  </a>
+  <button id="logout-btn" style="margin-left: 10px;">Logout</button>
+`;
     document.getElementById("logout-btn").addEventListener("click", () => {
       localStorage.removeItem("loggedInUser");
       window.location.href = "login.html";
     });
   } else {
     authControls.innerHTML = `
-      <a class="txt-deco-none txt_header ae_bd" href="signup.html">SIGN UP</a>
-      <a class="txt-deco-none txt_header ae_bd" href="login.html">LOGIN</a>
+       <a
+            class="txt-deco-none txt_header ae_bd header-btn-signup"
+            href="signup.html"
+            >SIGN UP</a
+          >
+          <a
+            class="txt-deco-none txt_header ae_bd header-btn-login"
+            href="login.html"
+            >LOGIN</a
+          >
     `;
   }
 });
