@@ -1,7 +1,11 @@
 .recipe-page-layout {
-  display: flex;
-  gap: 90px;
   margin: 40px 100px;
+}
+
+.content-columns {
+  display: flex;
+  gap: 60px;
+  position: relative;
   align-items: flex-start;
 }
 
@@ -181,11 +185,7 @@
 }
 
 
-.content-columns {
-  display: flex;
-  gap: 60px;
-  position: relative;
-}
+
 
 /* Vertical line */
 .content-columns::before {
@@ -200,4 +200,10 @@
   /* Putting the line in the middle between the rght and left columns */
   /* Since the gap between the left and right coumns is 60 x, we will use 30px to adjust its position */
   left: calc(70% + 30px);
+}
+
+
+.singular-serving-button.selected {
+  background-color: #832612;
+  color: #fff1e6;
 }

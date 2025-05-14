@@ -19,7 +19,8 @@ async function loadRecipe() {
 
     document.getElementById("detailed-recipe-title").innerText = recipe.name;
     document.getElementById("detailed-recipe-image").src = recipe.image;
-    document.getElementById("detailed-recipe-title").classList.add("ae_bd");
+    document.getElementById("detailed-recipe-title").classList.add("r35");
+
     renderIngredients(1);
     renderNutrition(1);
 
@@ -101,6 +102,24 @@ function renderNutrition(servings = 1) {
 function updateServings(servings) {
   renderIngredients(servings);
   renderNutrition(servings);
+
+  // First we get all the buttons with the class 'singular-serving-button'
+  // This is done to remove the 'selected' class from all buttons
+  // and add it to the button that was clicked
+  const buttons = document.querySelectorAll(".singular-serving-button");
+
+  for (let i = 0; i < buttons.length; i++) {
+    const servingsButton = buttons[i];
+
+    // Remove 'selected' from all
+    servingsButton.classList.remove("selected");
+
+    // If button's text matches clicked serving (e.g. "1x", "2x", "4x")
+    if (servingsButton.textContent === servings + "x") {
+      servingsButton.classList.add("selected");
+    }
+  }
 }
+
 
 loadRecipe();
