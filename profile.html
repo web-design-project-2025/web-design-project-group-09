@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="css/trending_section.css" />
     <link rel="stylesheet" href="css/category_section.css" />
     <link rel="stylesheet" href="css/ourteam_section.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <!-- <link rel="stylesheet" href="css/login.css" /> -->
     <script src="js/searchbar.js" defer></script>
     <script src="js/hide_header.js" defer></script>
+    <script src="js/profile.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -119,9 +120,38 @@
     </header>
     <main>
       <div class="profile-wrapper">
-        <h1>Welcome, <span id="username"></span>!</h1>
-        <p>Email: <span id="email"></span></p>
-        <button id="logout-button">Logout</button>
+        <form id="form">
+          <h1><span id="username"></span> :)</h1>
+          <p class="paragraph-text">Email: <span id="email"></span></p>
+
+          <h1>Favourite media/fandoms</h1>
+          <div class="input-section">
+            <input
+              type="text"
+              id="fandom-input"
+              placeholder="Write your favorite fandoms!"
+              disabled
+            />
+            <button type="button" id="edit-fandom-btn">Edit</button>
+            <button type="button" id="submit-fandom-btn" style="display: none">
+              Submit
+            </button>
+          </div>
+
+          <h1>About You</h1>
+          <div class="input-section">
+            <input
+              type="text"
+              id="about-input"
+              placeholder="Write about yourself!"
+              disabled
+            />
+            <button type="button" id="edit-about-btn">Edit</button>
+            <button type="button" id="submit-about-btn" style="display: none">
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </main>
     <footer>
@@ -175,6 +205,5 @@
         </section>
       </section>
     </footer>
-    <script src="js/profile.js"></script>
   </body>
 </html>
