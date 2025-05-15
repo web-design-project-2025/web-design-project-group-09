@@ -8,10 +8,9 @@ async function loadRecipe() {
   const data = await response.json();
 
   // Find the recipe with the given id
-  // The idea to use find() was taken from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
-  // The find() method gives the recipe that matches the condition
-
-  // We use == to allow for both string and number comparison because the id in the URL is a string and the id in the JSON is a number
+  // The idea to use find() was taken from MDN
+  // It returns the first recipe that matches the condition
+  // We use == to allow for both string and number comparison
   const recipe = data.find((r) => r.id == id);
 
   if (recipe) {
@@ -19,7 +18,8 @@ async function loadRecipe() {
 
     document.getElementById("detailed-recipe-title").innerText = recipe.name;
     document.getElementById("detailed-recipe-image").src = recipe.image;
-    document.getElementById("detailed-recipe-title").classList.add("ae_bd");
+    document.getElementById("detailed-recipe-title").classList.add("r35");
+
     renderIngredients(1);
     renderNutrition(1);
 
@@ -38,33 +38,34 @@ async function loadRecipe() {
 
     if (recipe.directions && recipe.directions.length > 0) {
       for (let i = 0; i < recipe.directions.length; i++) {
-        // We call step the current step of the recipe for better readability
+                // We call step the current step of the recipe for better readability
+
         const step = recipe.directions[i];
         directions += "<li>";
 
         // Step title
-        if (recipe.directions[i].title) {
-          directions += "<strong>" + step.title + "</strong><br>";
+        if (step.title) {
+          directions += `<strong>${step.title}</strong><br>`;
         }
 
         // Step description
         if (step.description) {
-          directions += "<p>" + step.description + "</p>";
+          directions += `<p>${step.description}</p>`;
         }
 
+        // Step image
         if (step.image) {
-          // The image property is optional, so we check if it exists before using it
+        // The image property is optional, so we check if it exists before using it
           directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
         }
+
         directions += "</li>";
       }
     }
 
     directionsContainer.innerHTML = directions;
   } else {
-    // In case, there is no recipe with the given id, we show a default message
-    document.getElementById("detailed-recipe-title").innerText =
-      "Recipe not found";
+    document.getElementById("detailed-recipe-title").innerText = "Recipe not found";
   }
 }
 
@@ -98,9 +99,21 @@ function renderNutrition(servings = 1) {
   nutritionList.innerHTML = nutritionHTML;
 }
 
+// Update servings and toggle selected button
 function updateServings(servings) {
   renderIngredients(servings);
   renderNutrition(servings);
+
+  const buttons = document.querySelectorAll(".singular-serving-button");
+
+  for (let i = 0; i < buttons.length; i++) {
+    const servingsButton = buttons[i];
+    servingsButton.classList.remove("selected");
+
+    if (servingsButton.textContent === servings + "x") {
+      servingsButton.classList.add("selected");
+    }
+  }
 }
 
 loadRecipe();
