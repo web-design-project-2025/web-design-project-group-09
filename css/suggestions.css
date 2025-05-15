@@ -49,7 +49,7 @@ html {
 }
 .wrapper {
   background-color: var(--input-color);
-  min-height: 400vh;
+  min-height: 200vh;
   /* width: max(800px); */
   display: flex;
   flex-direction: column;

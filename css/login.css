@@ -30,7 +30,7 @@ html {
 .wrapper {
   margin: 0 auto;
   background-color: var(--input-color);
-  min-height: 400vh;
+  min-height: 200vh;
   width: max(500px);
   display: flex;
   flex-direction: column;

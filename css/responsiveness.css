@@ -36,9 +36,11 @@ body {
   .learn-button,
   .member-h3,
   .category-name,
-  .inside_element p {
+  .inside_element p,
+  .inside_element_faq p {
     font-size: 22pt;
   }
+
   .footer-col .details {
     font-size: 24pt;
   }
@@ -54,6 +56,7 @@ body {
   .filter-section h3,
   .recipe figcaption strong,
   .inside_element h1,
+  .inside_element_faq h1,
   .inside_element_names h3,
   .wrapper p {
     font-size: 30pt;
@@ -107,8 +110,8 @@ body {
   .white_bg .inside_element {
     margin-right: 0;
   }
-  .white_bg .inside_element p,
-  .white_bg .inside_element h1 {
+  .white_bg p,
+  .white_bg h1 {
     padding-left: 40px;
   }
 
@@ -152,6 +155,7 @@ body {
   }
   .wrapper {
     width: max(400px, 100%);
+    min-height: 400vh;
   }
   #form button {
     font-size: 34pt;
