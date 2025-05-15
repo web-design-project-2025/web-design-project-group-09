@@ -1,8 +1,12 @@
 :root {
-    --navigation-color: #832612;
-    --primary-color: #ffd89a;
-    --secondary-color: #fff3e0;
-    --decoration-color: #ffdfac;
-    --decoration-color-darker: #ff4f7c;
-    --primary-font: "Poppins", serif;
-  }
+  --navigation-color: #832612;
+  --primary-color: #ffd89a;
+  --secondary-color: #fff3e0;
+  --decoration-color: #ffdfac;
+  --decoration-color-darker: #ff4f7c;
+  --primary-font: "Poppins", serif;
+}
+
+main {
+  font-family: "Aeonik-Regular", arial, sans-serif;
+}
