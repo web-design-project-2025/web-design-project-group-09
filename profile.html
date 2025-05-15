@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="css/trending_section.css" />
     <link rel="stylesheet" href="css/category_section.css" />
     <link rel="stylesheet" href="css/ourteam_section.css" />
-
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/responsiveness.css" />
-
     <script src="js/searchbar.js" defer></script>
     <script src="js/hide_header.js" defer></script>
     <script src="js/profile.js" defer></script>
@@ -100,7 +96,9 @@
               </svg>
             </button>
           </div>
-
+          <a class="txt-deco-none txt_header ae_bd" href="Favorites.html"
+            ><img src="img/favorites_heart_image.png" alt="Favorites heart"
+          /></a>
           <div id="auth-controls" class="txt_header ae_bd"></div>
         </ul>
       </nav>
@@ -119,9 +117,9 @@
         </section>
       </div>
     </header>
-    <main class="main">
+    <main>
       <div class="profile-wrapper">
-        <form id="form">
+        <form id="form-1">
           <h1><span id="username"></span> :)</h1>
           <p class="paragraph-text">Email: <span id="email"></span></p>
 
@@ -157,7 +155,7 @@
     </main>
     <footer>
       <section class="footer-container">
-        <section class="logo_part">
+        <section class="row">
           <section class="in_row">
             <section class="footer-col">
               <a href="index.html"
@@ -170,45 +168,37 @@
             <section class="footer-col">
               <h4 class="h4_footer">Want to request a recipe?</h4>
               <p class="details ae_rg">
-                We are always creating new ways to satisfy your fictional
-                cravings! Fill out
+                We are always creating new ways to satisfy your<br />
+                fictional cravings! Fill out
                 <a class="ae_bd txt_black" href="suggestions.html">our form</a>
-                , if these recipes are not satisfying your hunger.
+                , if these<br />
+                recipes are not satisfying your hunger.
               </p>
             </section>
           </section>
-        </section>
-        <section class="row">
+
           <section class="footer-col">
             <a href="faq.html"><h4 class="h4_footer">FAQ'S</h4></a>
             <ul>
-              <li><a class="ae_rg" href="boiling.html">Boiling Eggs?</a></li>
-              <li><a class="ae_rg" href="frying.html">Frying Eggs?</a></li>
-              <li><a class="ae_rg" href="laying.html">Laying Eggs?</a></li>
+              <li><a href="boiling.html">Boiling Eggs?</a></li>
+              <li><a href="frying.html">Frying Eggs?</a></li>
+              <li><a href="laying.html">Laying Eggs?</a></li>
             </ul>
           </section>
           <section class="footer-col">
             <h4 class="h4_footer">Support</h4>
             <ul>
-              <li>
-                <a class="ae_rg" href="privacy_policy.html">Privacy policy</a>
-              </li>
-              <li>
-                <a class="ae_rg" href="terms_of_service.html"
-                  >Terms of Service</a
-                >
-              </li>
-              <li>
-                <a class="ae_rg" href="privacy-policy.html">Need Help?</a>
-              </li>
+              <li><a href="privacy_policy.html">Privacy policy</a></li>
+              <li><a href="terms_of_service.html">Terms of Service</a></li>
+              <li><a href="privacy-policy.html">Need Help?</a></li>
             </ul>
           </section>
           <section class="footer-col">
             <h4 class="h4_footer">Contact</h4>
-            <ul>
-              <li><a class="ae_rg" href="#">E-Mail</a></li>
-              <li><a class="ae_rg" href="#">Instagram</a></li>
-              <li><a class="ae_rg" href="#">Facebook</a></li>
+            <ul class="social-links">
+              <li><a href="#">E-Mail</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
             </ul>
           </section>
         </section>
