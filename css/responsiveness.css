@@ -1,3 +1,10 @@
+/* Responsiveness */
+@media screen and (max-width: 1168px) {
+  body {
+    min-width: 1168px;
+  }
+}
+
 @media (max-width: 781px) {
   .about-bp-inner {
     display: block;

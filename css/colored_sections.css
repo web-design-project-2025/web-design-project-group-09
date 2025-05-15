@@ -38,13 +38,6 @@ body {
   flex-direction: column;
 }
 
-/* Responsiveness */
-@media screen and (min-width: 100px) {
-  body {
-    min-width: 1168px;
-  }
-}
-
 .pink_bg_faq {
   background-color: #fff3e0;
   display: flex;
