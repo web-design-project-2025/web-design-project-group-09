@@ -1,38 +1,92 @@
-body {
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
-.main {
-  padding: 0;
+
+:root {
+  --accent-color: #ffdfac;
+  --base-color: white;
+  --text-color: black;
+  --input-color: #fff3e0;
 }
 
 .profile-wrapper {
-  background-color: #fff3e0;
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
-  width: 1148px;
-  height: 425px;
+  margin: 0 auto;
+  background-color: var(--input-color);
+  min-height: 150vh;
+  width: max(1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
 }
 
 h1 {
-  margin-bottom: 10px;
+  margin-left: 40px;
+  margin-top: 40px;
+  font-family: "redaction-35", arial, sans-serif;
+  src: url(../redaction-35-latin-700-normal.ttf);
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
+.paragraph-text {
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-size: 14pt;
+  color: var(--text-color);
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+#form input {
+  margin-left: 50px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 700px;
+  height: 100px;
+  padding: 1em;
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-size: 14pt;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--base-color);
+  transition: 100ms ease;
+}
+
+#form input:hover {
+  border: var(--accent-color);
+}
+#form input:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+div:has(input:focus) > label {
+  background-color: var(--text-color);
+}
+
+#form input::placeholder {
+  color: #a9a9a9;
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-size: 14pt;
+}
+
+#form button {
+  margin-left: 10px;
+  padding: 0.5em 1em;
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-size: 12pt;
+  border-radius: 5px;
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
   cursor: pointer;
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#form button:hover {
+  background-color: #ffc978;
 }
