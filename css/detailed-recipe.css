@@ -51,6 +51,9 @@
   /* The way how to use counter-reset was taken from here: https://www.youtube.com/watch?v=UKzXaztdeCc&ab_channel=RapidTutor */
   counter-reset: step-counter;
 }
+#directions-container img {
+  min-width: 400px;
+}
 
 #directions-container li {
   counter-increment: step-counter;
@@ -118,6 +121,7 @@
 
 
 /* Nutrition and Ingredients */
+
 .nutrition-ingredients-box {
   background-color: #fff1e6;
   padding: 20px 30px;
