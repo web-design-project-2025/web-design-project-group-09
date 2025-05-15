@@ -1,0 +1,38 @@
+/* Responsiveness */
+@media screen and (max-width: 1168px) {
+  body {
+    min-width: 1168px;
+  }
+}
+
+@media (max-width: 781px) {
+  .about-bp-inner {
+    display: block;
+  }
+  .bp-text {
+    margin-bottom: 2rem;
+  }
+  .h1_title {
+    font-size: 40pt;
+  }
+  .bp-text p,
+  .header-text,
+  .learn-button,
+  .member-h3 {
+    font-size: 22pt;
+  }
+  .member-p,
+  .trending_text_content,
+  .category-name {
+    font-size: 20pt;
+  }
+  .learn-button {
+    padding: 34px 72px;
+  }
+  .carousel_item {
+    flex: 0 0 41%;
+  }
+  .carousel_text {
+    font-size: 26pt;
+  }
+}

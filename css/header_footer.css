@@ -140,6 +140,9 @@ ul {
   align-items: start;
   padding: 0 15px;
 }
+.footer-container {
+  display: flex;
+}
 
 /* .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;

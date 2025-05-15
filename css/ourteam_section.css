@@ -1,0 +1,138 @@
+.about-bp {
+  padding: 60px 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #fff3e0;
+}
+
+.about-bp-inner {
+  max-width: 1168px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  display: flex;
+  flex-wrap: nowrap !important;
+  align-items: normal !important;
+  box-sizing: border-box;
+  gap: 1.5rem;
+}
+.bp-text {
+  flex-basis: 33.33%;
+  margin: 0;
+}
+.header-text {
+  margin-block-start: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.header-text::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #832612;
+}
+.h2-text-bp {
+  margin: 0;
+  display: inline;
+  text-transform: uppercase;
+}
+.bp-learn {
+  margin-block-end: 0;
+  gap: 32px;
+  display: flex;
+  margin-block-start: 1.5rem;
+  box-sizing: border-box;
+}
+.learn-button-block {
+  display: inline-block;
+  margin: 0;
+}
+.learn-button {
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #832612;
+  color: #fff1e6;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 16px 24px;
+  align-content: center;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.learn-button:hover {
+  color: #fff1e6;
+  background-color: #6a2010;
+}
+.bp-team {
+  flex-basis: 66.66%;
+  margin: 0;
+}
+.header-team {
+  margin-block-start: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.h2-team-bp {
+  margin: 0;
+  display: inline;
+  text-transform: uppercase;
+}
+.header-team::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #832612;
+}
+.team-members {
+  display: flex;
+  gap: 1.5rem;
+  margin-block-start: 1.5rem;
+  margin-block-end: 0;
+  flex-wrap: nowrap !important;
+  align-items: normal !important;
+}
+.members-container {
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 0;
+}
+.one-member {
+  align-items: center;
+  margin-block-start: 0;
+  margin: 32px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.member-image {
+  width: 155px;
+  margin-right: 20px;
+}
+.member-image img {
+  display: block;
+  width: 100%;
+  border-radius: 155px;
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+.member-content {
+  flex: 1;
+}
+.member-h3 {
+  margin-top: 8px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
