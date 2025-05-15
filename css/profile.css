@@ -1,18 +1,26 @@
 body {
-  background-color: #f4f4f4;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+* {
   margin: 0;
+  padding: 0;
+}
+.main {
+  padding: 0;
 }
 
 .profile-wrapper {
-  background-color: #fff;
+  background-color: #fff3e0;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 1148px;
+  height: 425px;
 }
 
 h1 {

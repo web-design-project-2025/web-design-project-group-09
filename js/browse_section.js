@@ -48,18 +48,17 @@ function setupCarousel() {
 
   var totalAmount = track.children.length;
   var index = totalAmount / 3;
-  console.log(totalAmount);
+
   var carouselItem = track.querySelector(".carousel_item");
   var itemWidth = carouselItem.offsetWidth + 16;
 
   var shownItems = 4;
 
   var scrollItems = index * itemWidth;
-  console.log(scrollItems);
+
   track.style.transform = "translateX(-" + scrollItems + "px)";
 
   function updateCarousel() {
-    console.log(index);
     scrollItems = index * itemWidth;
     track.style.transform = "translateX(-" + scrollItems + "px)";
   }

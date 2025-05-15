@@ -98,3 +98,36 @@ themeSwitch.addEventListener("click", () => {
     disableSearchbar();
   }
 });
+
+//USER CONTROLS LOGIC
+
+document.addEventListener("DOMContentLoaded", () => {
+  const authControls = document.getElementById("auth-controls");
+  const user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+  if (user) {
+    authControls.innerHTML = `
+     <a href="profile.html" class="txt-deco-none txt_header ae_bd">
+    Welcome, ${user.username}
+  </a>
+  <button id="logout-btn" style="margin-left: 10px;">Logout</button>
+`;
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "login.html";
+    });
+  } else {
+    authControls.innerHTML = `
+       <a
+            class="txt-deco-none txt_header ae_bd header-btn-signup"
+            href="signup.html"
+            >SIGN UP</a
+          >
+          <a
+            class="txt-deco-none txt_header ae_bd header-btn-login"
+            href="login.html"
+            >LOGIN</a
+          >
+    `;
+  }
+});

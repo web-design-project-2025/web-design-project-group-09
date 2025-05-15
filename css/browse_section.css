@@ -73,6 +73,10 @@
   z-index: 1;
   border-radius: 50%;
 }
+.carousel-btn svg {
+  width: 36px;
+  height: 34px;
+}
 
 .carousel-btn.prev {
   left: 10px;
