@@ -18,7 +18,6 @@ async function loadRecipe() {
 
     document.getElementById("detailed-recipe-title").innerText = recipe.name;
     document.getElementById("detailed-recipe-image").src = recipe.image;
-    document.getElementById("detailed-recipe-title").classList.add("r35");
 
     renderIngredients(1);
     renderNutrition(1);
