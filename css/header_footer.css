@@ -26,6 +26,9 @@
   margin: 0pt;
   background-color: #ffd89a;
 }
+.ul_header_logo img {
+  max-width: 300px;
+}
 .ul_header_right {
   display: flex;
   align-items: center;

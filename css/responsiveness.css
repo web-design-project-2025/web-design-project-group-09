@@ -35,9 +35,12 @@ body {
   .header-team,
   .learn-button,
   .member-h3,
-  .category-name {
+  .category-name,
+  .inside_element p,
+  .inside_element_faq p {
     font-size: 22pt;
   }
+
   .footer-col .details {
     font-size: 24pt;
   }
@@ -45,11 +48,24 @@ body {
   .txt_header,
   #searchbar_Input,
   #searchbar_section figcaption,
-  .footer-col li {
+  .footer-col li,
+  .filter-section span,
+  .recipe figcaption p {
     font-size: 26pt;
   }
+  .filter-section h3,
+  .recipe figcaption strong,
+  .inside_element h1,
+  .inside_element_faq h1,
+  .inside_element_names h3,
+  .wrapper p {
+    font-size: 30pt;
+  }
   .h1_title,
-  .h4_footer {
+  .h4_footer,
+  .filter-section h2,
+  .pink_bg h1,
+  .white_bg h1 {
     font-size: 40pt;
   }
 
@@ -78,9 +94,27 @@ body {
   .solo_img {
     min-width: 200px;
   }
-  .ul_header_logo img {
+  .inside_element_names img {
+    min-width: 300px;
+  }
+  .ul_header_logo img,
+  .inside_element img {
     min-width: 500px;
   }
+  .pink_bg .inside_element {
+    margin-right: 0;
+  }
+  .pink_bg .inside_element p {
+    padding-right: 20px;
+  }
+  .white_bg .inside_element {
+    margin-right: 0;
+  }
+  .white_bg p,
+  .white_bg h1 {
+    padding-left: 40px;
+  }
+
   .main {
     padding-top: 340px;
   }
@@ -98,6 +132,38 @@ body {
   .ul_header_logo {
     justify-content: center;
   }
+  .pink_bg_names {
+    display: block;
+  }
+  .inside_element_names {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+  .inside_element_names img {
+    margin-right: 30px;
+  }
+  #form input {
+    font-size: 30pt;
+    box-sizing: unset;
+  }
+  #form label {
+    width: 100px;
+  }
+  #form svg {
+    height: 48px;
+    width: 48px;
+  }
+  .wrapper {
+    width: max(400px, 100%);
+    min-height: 400vh;
+  }
+  #form button {
+    font-size: 34pt;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 500px) {
 }
 
 @media screen and (max-width: 1270px) {
