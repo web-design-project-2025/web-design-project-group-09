@@ -27,7 +27,11 @@ body {
   }
 
   .member-p,
-  .trending_text_content {
+  .trending_text_content,
+  .content-columns p,
+  .content-columns button,
+  .content-columns h3,
+  .content-columns li {
     font-size: 20pt;
   }
   .bp-text p,
@@ -37,7 +41,8 @@ body {
   .member-h3,
   .category-name,
   .inside_element p,
-  .inside_element_faq p {
+  .inside_element_faq p,
+  #directions-container li strong {
     font-size: 22pt;
   }
 
@@ -50,7 +55,8 @@ body {
   #searchbar_section figcaption,
   .footer-col li,
   .filter-section span,
-  .recipe figcaption p {
+  .recipe figcaption p,
+  .content-columns h2 {
     font-size: 26pt;
   }
   .filter-section h3,
@@ -161,9 +167,16 @@ body {
     font-size: 34pt;
     white-space: nowrap;
   }
-}
-
-@media (max-width: 500px) {
+  .filter-section input {
+    width: 30px;
+    height: 30px;
+  }
+  /* .right-column {
+    display: none;
+  }
+  .left-column {
+    width: 100%;
+  } */
 }
 
 @media screen and (max-width: 1270px) {
