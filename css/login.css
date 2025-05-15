@@ -30,7 +30,7 @@ html {
 .wrapper {
   margin: 0 auto;
   background-color: var(--input-color);
-  min-height: 200vh;
+  min-height: 400vh;
   width: max(500px);
   display: flex;
   flex-direction: column;
@@ -56,7 +56,6 @@ form > div {
 
 form label {
   flex-shrink: 0;
-  height: 50px;
   width: 50px;
   background-color: var(--accent-color);
   fill: var(--base-color);
@@ -64,12 +63,12 @@ form label {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
 form input {
   box-sizing: border-box;
   flex-grow: 1;
-  min-width: 0;
   height: 50px;
   padding: 1em;
   font: inherit;
@@ -125,10 +124,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-@media (max-width: 500px) {
-  .wrapper {
-    width: max(400px, 100%);
-  }
 }
