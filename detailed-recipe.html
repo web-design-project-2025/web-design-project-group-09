@@ -121,84 +121,96 @@
         </section>
       </div>
     </header>
-    <main id="detailed-recipe-container">
+    <main class="main" id="detailed-recipe-container">
       <div class="recipe-page-layout">
-
         <div class="content-columns">
-        <!-- LEFT COLUMN -->
-        <div class="left-column">
-          <div class="main-image-box">
-            <img id="detailed-recipe-image" src="" alt="Recipe image" />
-          </div>
-
-          <div class="extra-tip-box" id="extra-tip-box" style="display: none">
-            <h2 class="r35">Extra Tip</h2>
-            <p id="extra-tip"></p>
-          </div>
-
-          <div class="directions-block">
-            <h2 class="r35">Directions</h2>
-            <ol id="directions-container"></ol>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN -->
-        <div class="right-column">
-          <div class="nutrition-ingredients-box">
-            <h1 id="detailed-recipe-title" class="r35">Recipe Title</h1>
-
-            <div class="serving-buttons">
-              <button class="singular-serving-button selected" onclick="updateServings(1)">1x</button>
-              <button class="singular-serving-button" onclick="updateServings(2)">2x</button>
-              <button class="singular-serving-button" onclick="updateServings(4)">4x</button>
+          <!-- LEFT COLUMN -->
+          <div class="left-column">
+            <div class="main-image-box">
+              <img id="detailed-recipe-image" src="" alt="Recipe image" />
             </div>
-            <div class="nutrition-ingredients">
-              <div class="nutrition ae_rg">
-                <h2 class="	r35">Nutrition</h2>
-                <ul id="nutrition-list"></ul>
-              </div>
+            <div class="nutrition-ingredients-box">
+              <h1 id="detailed-recipe-title" class="r35">Recipe Title</h1>
 
-              <div class="ingredients">
-                <h2 class="	r35">Ingredients</h2>
-                <ul id="ingredients-list"></ul>
+              <div class="serving-buttons">
+                <button
+                  class="singular-serving-button selected"
+                  onclick="updateServings(1)"
+                >
+                  1x
+                </button>
+                <button
+                  class="singular-serving-button"
+                  onclick="updateServings(2)"
+                >
+                  2x
+                </button>
+                <button
+                  class="singular-serving-button"
+                  onclick="updateServings(4)"
+                >
+                  4x
+                </button>
               </div>
+              <div class="nutrition-ingredients">
+                <div class="nutrition ae_rg">
+                  <h2 class="r35">Nutrition</h2>
+                  <ul id="nutrition-list"></ul>
+                </div>
+
+                <div class="ingredients">
+                  <h2 class="r35">Ingredients</h2>
+                  <ul id="ingredients-list"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="extra-tip-box" id="extra-tip-box" style="display: none">
+              <h2 class="r35">Extra Tip</h2>
+              <p id="extra-tip"></p>
+            </div>
+
+            <div class="directions-block">
+              <h2 class="r35">Directions</h2>
+              <ol id="directions-container"></ol>
             </div>
           </div>
 
-          <div class="sidebar-block">
-            <h3 class="r35">Latest Recipes</h3>
-            <a href="#"
-              ><img src="img/bacon-pancakes-1.png" alt="" />
-              <p>Bacon Pancakes</p></a
-            >
-            <a href="#"
-              ><img src="img/bacon-pancakes-1.png" alt="" />
-              <p>Bacon Pancakes</p></a
-            >
-            <a href="#"
-              ><img src="img/bacon-pancakes-1.png" alt="" />
-              <p>Bacon Pancakes</p></a
-            >
-          </div>
+          <!-- RIGHT COLUMN -->
+          <div class="right-column">
+            <div class="sidebar-block">
+              <h3 class="r35">Latest Recipes</h3>
+              <a href="#"
+                ><img src="img/bacon-pancakes-1.png" alt="" />
+                <p>Bacon Pancakes</p></a
+              >
+              <a href="#"
+                ><img src="img/bacon-pancakes-1.png" alt="" />
+                <p>Bacon Pancakes</p></a
+              >
+              <a href="#"
+                ><img src="img/bacon-pancakes-1.png" alt="" />
+                <p>Bacon Pancakes</p></a
+              >
+            </div>
 
-          <div class="sidebar-block">
-            <h3 class="r35">Trending Recipes</h3>
-            <a href="#"
-              ><img src="img/bacon-pancakes-1.png" alt="" />
-              <p>Bacon Pancakes</p></a
-            >
-          </div>
+            <div class="sidebar-block">
+              <h3 class="r35">Trending Recipes</h3>
+              <a href="#"
+                ><img src="img/bacon-pancakes-1.png" alt="" />
+                <p>Bacon Pancakes</p></a
+              >
+            </div>
 
-          <div class="sidebar-block">
-            <h3 class="r35">Follow Us</h3>
-            <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">TikTok</a></li>
-            </ul>
+            <div class="sidebar-block">
+              <h3 class="r35">Follow Us</h3>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">TikTok</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
-
         </div>
       </div>
     </main>
@@ -228,8 +240,9 @@
         </section>
         <section class="row">
           <section class="footer-col">
-            <a href="faq.html"><h4 class="h4_footer">FAQ'S</h4></a>
+            <h4 class="h4_footer">Need help?</h4>
             <ul>
+              <li><a class="ae_rg" href="faq.html">FAQ's</a></li>
               <li><a class="ae_rg" href="boiling.html">Boiling Eggs?</a></li>
               <li><a class="ae_rg" href="frying.html">Frying Eggs?</a></li>
               <li><a class="ae_rg" href="laying.html">Laying Eggs?</a></li>
@@ -246,17 +259,32 @@
                   >Terms of Service</a
                 >
               </li>
-              <li>
-                <a class="ae_rg" href="privacy-policy.html">Need Help?</a>
-              </li>
             </ul>
           </section>
           <section class="footer-col">
             <h4 class="h4_footer">Contact</h4>
             <ul>
-              <li><a class="ae_rg" href="#">E-Mail</a></li>
-              <li><a class="ae_rg" href="#">Instagram</a></li>
-              <li><a class="ae_rg" href="#">Facebook</a></li>
+              <li>
+                <a target="_blank" class="ae_rg" href="https://mail.google.com/"
+                  >E-Mail</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="ae_rg"
+                  href="https://www.instagram.com/"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="ae_rg"
+                  href="https://www.facebook.com/"
+                  >Facebook</a
+                >
+              </li>
             </ul>
           </section>
         </section>
