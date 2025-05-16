@@ -29,6 +29,9 @@
 .ul_header_logo img {
   max-width: 300px;
 }
+.ul_header_logo a {
+  padding: 10px 0 10px 0;
+}
 .ul_header_right {
   display: flex;
   align-items: center;
@@ -41,7 +44,7 @@
 .txt_header {
   font-size: 16pt;
   color: #832612;
-  padding: 30pt;
+  padding: 0 30pt 0 30pt;
   white-space: nowrap;
 }
 .txt-deco-none {
