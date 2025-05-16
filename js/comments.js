@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       commentCount.textContent = `${recipeComments.length} comments`;
     }
 
+    
 recipeComments.forEach(function (c, index) {
   var commentEl = document.createElement("div");
   commentEl.classList.add("comment");
