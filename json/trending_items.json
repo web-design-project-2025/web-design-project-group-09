@@ -2,19 +2,19 @@
   {
     "id": 1,
     "name": "Bacon Pancakes",
-    "img": "img/bacon-pancakes-1.png",
+    "img": "img/pancakes-wide.png",
     "alt": "Bacon Pancakes"
   },
   {
     "id": 2,
     "name": "Senku Cola",
-    "img": "img/cola-2.png",
+    "img": "img/cola-wide.png",
     "alt": "Senku Cola"
   },
   {
     "id": 3,
     "name": "Bloom Into You Cheesecake",
-    "img": "img/bloom-cheesecake-1.jpg",
+    "img": "img/cheesecake-wide.png",
     "alt": "Bloom Into You Cheesecake"
   }
 ]
