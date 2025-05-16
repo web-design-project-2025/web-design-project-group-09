@@ -171,12 +171,15 @@ body {
     width: 30px;
     height: 30px;
   }
-  /* .right-column {
+
+  .right-column,
+  .left-column::after {
     display: none;
   }
-  .left-column {
+  .left-column,
+  #directions-container li img {
     width: 100%;
-  } */
+  }
 }
 
 @media screen and (max-width: 1270px) {

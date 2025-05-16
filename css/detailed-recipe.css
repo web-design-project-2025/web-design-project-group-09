@@ -15,10 +15,11 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: relative;
 }
 
 .main-image-box img {
-  width: 34%;
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -34,7 +35,6 @@
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
 
 /* Directions */
 .directions-block {
@@ -106,19 +106,15 @@
 
 .serving-buttons button:hover {
   background-color: #832612;
-  color: #fff1e6; 
+  color: #fff1e6;
 }
 
-
-
-
 #directions-container li img {
-  width: 30%; 
+  width: 30%;
   border-radius: 12px;
   margin-top: 10px;
   display: block;
 }
-
 
 /* Nutrition and Ingredients */
 
@@ -130,13 +126,23 @@
 
 .nutrition-ingredients {
   display: flex;
-  justify-content: space-between;
+
   gap: 30px;
 }
 
 .nutrition,
 .ingredients {
   flex: 1;
+}
+.nutrition {
+  max-width: 200px;
+}
+.ingredients {
+  max-width: 400px;
+}
+#nutrition-list,
+#ingredients-list {
+  line-height: 1.5;
 }
 
 .nutrition h3,
@@ -189,9 +195,8 @@
   margin-bottom: 10px;
 }
 
-
 /* Vertical line */
-.right-column::before {
+.left-column::after {
   content: "";
   position: absolute;
   top: 0;
@@ -202,15 +207,10 @@
 
   /* Putting the line in the middle between the rght and left columns */
   /* column width + gap of 30px because half of the size between the columns */
-  right: calc(100% + 30px);
+  left: calc(100% + 30px);
 }
-
 
 .singular-serving-button.selected {
   background-color: #832612;
   color: #fff1e6;
-}
-
-#detailed-recipe-container {
-  margin-top: 13rem; /* Or any value you want */
 }

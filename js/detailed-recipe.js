@@ -37,7 +37,7 @@ async function loadRecipe() {
 
     if (recipe.directions && recipe.directions.length > 0) {
       for (let i = 0; i < recipe.directions.length; i++) {
-                // We call step the current step of the recipe for better readability
+        // We call step the current step of the recipe for better readability
 
         const step = recipe.directions[i];
         directions += "<li>";
@@ -54,7 +54,7 @@ async function loadRecipe() {
 
         // Step image
         if (step.image) {
-        // The image property is optional, so we check if it exists before using it
+          // The image property is optional, so we check if it exists before using it
           directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
         }
 
@@ -64,7 +64,8 @@ async function loadRecipe() {
 
     directionsContainer.innerHTML = directions;
   } else {
-    document.getElementById("detailed-recipe-title").innerText = "Recipe not found";
+    document.getElementById("detailed-recipe-title").innerText =
+      "Recipe not found";
   }
 }
 
@@ -78,7 +79,7 @@ function renderIngredients(servings = 1) {
   currentRecipe.ingredients.forEach((ingredient) => {
     // We multiple the base quantity by the sekected number of servings which is a number wso we can use it directly
     const total = ingredient.quantity * servings;
-    ingredientsHTML += `<li>${ingredient.name}: ${total} ${ingredient.unit}</li>`;
+    ingredientsHTML += `<li>${ingredient.name}:<strong> ${total} ${ingredient.unit} </strong> </li>`;
   });
 
   ingredientsList.innerHTML = ingredientsHTML;
@@ -92,7 +93,7 @@ function renderNutrition(servings = 1) {
 
   currentRecipe.nutrition.forEach((nutrition) => {
     const total = nutrition.quantity * servings;
-    nutritionHTML += `<li>${nutrition.name}: ${total} ${nutrition.unit}</li>`;
+    nutritionHTML += `<li>${nutrition.name}:<strong> ${total} ${nutrition.unit}</strong></li>`;
   });
 
   nutritionList.innerHTML = nutritionHTML;
