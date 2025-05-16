@@ -1,6 +1,6 @@
 #comment-section {
   padding: 2rem;
-  max-width: 700px;
+  max-width: 1500px;
   font-family: sans-serif;
 }
 
@@ -14,7 +14,7 @@
   width: 100%;
   border: none;
   padding: 1rem;
-  background: #fff5e6;
+  background: #fff1e6;
   border-radius: 20px;
   font-size: 1rem;
 
@@ -29,8 +29,7 @@
 
 .star-rating {
   font-size: 1.5rem;
-  cursor: pointer;
-  color: #f5c518;
+  color: #ffd89a;
 }
 
 .star-rating span {
@@ -38,19 +37,18 @@
 }
 
 #submit-comment {
-  align-self: flex-start;
-  background-color: #fbd48b;
+  align-self: flex-end;
+  background-color: #ffd89a;
   color: #000;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 20px;
-  font-weight: bold;
   cursor: pointer;
 }
 
 #comments-container {
   margin-top: 2rem;
-  border-top: 1px solid #aaa;
+  border-top: 2px solid #832612;
   padding-top: 1rem;
 }
 
@@ -58,14 +56,6 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 1.5rem;
-}
-
-.comment .avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #ccc;
-  background-size: cover;
 }
 
 .comment-content {
@@ -94,11 +84,10 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #832612; /* Or any theme color */
+  background-color: #832612;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 20px; /* You can bump it up or down */
-  flex-shrink: 0; /* Prevents it from collapsing */
+  font-size: 20px;
 }
