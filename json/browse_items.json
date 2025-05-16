@@ -1,50 +1,38 @@
 [
   {
-    "id": 1,
-    "name": "Bacon Pancakes",
-    "img": "img/bacon-pancakes-1.png",
-    "alt": "Bacon Pancakes"
-  },
-  {
-    "id": 2,
-    "name": "Senku Cola",
-    "img": "img/cola-2.png",
-    "alt": "Senku Cola"
-  },
-  {
-    "id": 3,
-    "name": "Bloom Into You Cheesecake",
-    "img": "img/bloom-cheesecake-1.jpg",
-    "alt": "Bloom Into You Cheesecake"
-  },
-  {
-    "id": 4,
-    "name": "Placeholder",
-    "img": "img/placeholder.jpg",
-    "alt": "Bacon Pancakes"
-  },
-  {
-    "id": 5,
-    "name": "Placeholder",
-    "img": "img/placeholder.jpg",
-    "alt": "Bacon Pancakes"
-  },
-  {
-    "id": 6,
-    "name": "Placeholder",
-    "img": "img/placeholder.jpg",
-    "alt": "Bacon Pancakes"
-  },
-  {
-    "id": 7,
-    "name": "Placeholder",
-    "img": "img/placeholder.jpg",
-    "alt": "Bacon Pancakes"
+    "id": 9,
+    "name": "Finn's Meatloaf",
+    "img": "img/finn-meatloaf.jpg",
+    "alt": "Finn's Meatloaf"
   },
   {
     "id": 8,
-    "name": "Placeholder",
-    "img": "img/placeholder.jpg",
-    "alt": "Bacon Pancakes"
+    "name": "Punch Romaine",
+    "img": "img/hannibal-3.png",
+    "alt": "Punch Romaine"
+  },
+  {
+    "id": 7,
+    "name": "Mabel Juice",
+    "img": "img/mabel-juice.png",
+    "alt": "Mabel Juice"
+  },
+  {
+    "id": 6,
+    "name": "Ramen - Galaxy Expresss 999",
+    "img": "img/galaxy express ramen.png",
+    "alt": "Ramen - Galaxy Expresss 999"
+  },
+  {
+    "id": 5,
+    "name": "Hamburg Steak",
+    "img": "img/hamburg-drawing.png",
+    "alt": "Hamburg Steak"
+  },
+  {
+    "id": 4,
+    "name": "Katsudon - Yuri!!! on Ice",
+    "img": "img/katsudon-drawing.jpg",
+    "alt": "Katsudon - Yuri!!! on Ice"
   }
 ]

@@ -12,6 +12,9 @@
 .header-hidden {
   transform: translateY(-100%);
 }
+.header-hidden #searchbar_section {
+  display: none !important;
+}
 .nav_header {
   display: grid;
   flex: 1;

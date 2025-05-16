@@ -46,7 +46,7 @@ body {
     font-size: 22pt;
   }
   #detailed-recipe-container {
-  padding-top: 23rem;
+    padding-top: 23rem;
   }
   .footer-col .details {
     font-size: 24pt;
@@ -181,6 +181,9 @@ body {
   .left-column,
   #directions-container li img {
     width: 100%;
+  }
+  .ul_header_right {
+    padding-bottom: 30pt;
   }
 }
 
