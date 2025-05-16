@@ -91,3 +91,26 @@
   color: #fff;
   font-size: 20px;
 }
+
+.delete-comment {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: #832612;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.delete-comment i {
+  font-size: 0.85rem;
+}
+
+.delete-comment:hover {
+  text-decoration: none;
+  color: #600;
+}
