@@ -171,7 +171,7 @@
     "name": "Katsudon - Yuri!!! on Ice",
     "image": "img/katsudon-drawing.jpg",
     "hoverImage": "img/katsudon-real.jpg",
-    "tip": "The hamburg steak is given to warriors for their birthday",
+    "tip": " Katsu and the word for victory are pronounced the same in Japanese (カツ and 勝つ, respectively), so athletes will often eat some katsudon before or after they compete.",
     "category": "meals",
     "media": ["animated-media", "print-media"],
     "preferences": [],
@@ -240,67 +240,113 @@
     "name": "Hamburg Steak",
     "image": "img/hamburg-drawing.png",
     "hoverImage": "img/hamburg steak.png",
-    "tip": "Katsu and the word for victory are pronounced the same in Japanese (カツ and 勝つ, respectively), so athletes will often eat some katsudon before or after they compete.",
+    "tip": "The hamburg steak is given to warriors for their birthday",
     "category": "meals",
     "media": ["animated-media", "print-media"],
     "preferences": [],
     "rating": 5,
     "time": "30 minutes",
     "nutrition": [
-      { "name": "Protein", "quantity": 40, "unit": "g" },
-      { "name": "Fats", "quantity": 30, "unit": "g" },
-      { "name": "Carbs", "quantity": 68, "unit": "g" },
-      { "name": "Sodium", "quantity": 200, "unit": "mg" },
-      { "name": "Cholesterol", "quantity": 120, "unit": "mg" }
+      { "name": "Protein", "quantity": 140, "unit": "g" },
+      { "name": "Fats", "quantity": 300, "unit": "g" },
+      { "name": "Carbs", "quantity": 0, "unit": "g" },
+      { "name": "Sodium", "quantity": 670, "unit": "mg" },
+      { "name": "Cholesterol", "quantity": 780, "unit": "mg" }
     ],
     "ingredients": [
-      { "name": "Cooked Rice", "quantity": 200, "unit": "g" },
-      { "name": "Boneless pork chops", "quantity": 1, "unit": "pieces" },
-      { "name": "Flour for dusting", "quantity": 10, "unit": "g" },
-      { "name": "Salt and pepper", "quantity": 1, "unit": "g" },
-      { "name": "egg, beaten, for breading", "quantity": 1, "unit": "pieces" },
-      { "name": "eggs", "quantity": 1, "unit": "pieces" },
-      { "name": "panko", "quantity": 32, "unit": "g" },
-      {
-        "name": "dashi stock (you can use chicken or vegetable stock if you can't get a hold of some dashi or dashi powder)",
-        "quantity": 120,
-        "unit": "g"
-      },
-      { "name": "Soy Sauce", "quantity": 0.5, "unit": "Tbsp." },
-      { "name": "Mirin", "quantity": 1, "unit": "Tbsp." },
-      { "name": "Sugar", "quantity": 1, "unit": "tsp." },
-      { "name": "Small onion", "quantity": 0.5, "unit": "pieces" },
-      {
-        "name": "Peas/Scallions/Green onions for toppings",
-        "quantity": 1,
-        "unit": "handful"
-      }
+      { "name": "Beef", "quantity": 1000, "unit": "g" },
+      { "name": "Bread crumbs", "quantity": 200, "unit": "g" },
+      { "name": "Eggs", "quantity": 2, "unit": "pieces" },
+      { "name": "Salt and pepper", "quantity": 1, "unit": "tsp." },
+      { "name": "Large onion", "quantity": 1, "unit": "pieces" },
+      { "name": "Olive oil/butter", "quantity": 1, "unit": "handful" },
+      { "name": "Water", "quantity": 250, "unit": "ml" }
     ],
     "directions": [
       {
-        "title": "Heat up oil in a pan/stove",
-        "description": "About half full of oil, or ~2cm deep should do, if you have an air fryer, you can also use that",
+        "title": "Dice your onions and add them to a pan",
+        "description": "Heat frying pan on stovetop at medium heat, add either olive oil or butter into pan, & when hot enough add diced onion to sauté When onions are an amber color take pan off heat & turn off stove. Put the onions aside to cool down.",
         "image": ""
       },
       {
-        "title": "Prepare the pork cutlet",
-        "description": "Use a meat mallet to pound the pork to about 1cm thick. Season the pork chops with salt and pepper, and dust them with the flour.",
-        "image": "img/dusted pork chops.jpeg"
+        "title": "Prepare beef with bread crumbs and the onions",
+        "description": " Put the beef and breadcrumbs in a large mixing bowl, add the salt and pepper, 2 eggs and the sauté'd onions. Mix everything",
+        "image": ""
       },
       {
-        "title": "Coat the pork chops with panko and fry them",
-        "description": "Dip the pork into the first beaten egg, then coat them with panko crumbs. Once the oil is hot, place the breaded pork into the oil.  Fry them until golden brown on each side.  Once they're cooked, remove them from the oil, and set them aside on a plate with some paper towels to absorb the excess oil.",
-        "image": "img/breaded-pork-chops.jpg"
+        "title": "Transfer the beef mixture into a pan",
+        "description": "Put thin layer of olive oil or butter in the pan before putting in your beef mixture. Put the beef in a large pan on the stovetop, we recommend a 12 inch cast iron pan, & turn heat on to a little above low heat. Compress meat into a big patty shape, including rounding off edges, as much as you can",
+        "image": ""
       },
       {
-        "title": "Mix ingredients into a pan",
-        "description": "If you haven't already made your rice, start cooking it now. Add the stock, soy sauce, mirin and sugar to a pan (one big enough to hold both pork chops) and bring it to a simmer.  Add in the onions and cover the pan with a lid.Once the onions are translucent, slice the pork katsu, and carefully (as to keep the slices together, treating them as if it were still a whole cutlet) add it on top of the onions.Beat the remaining two eggs and pour them on top of the pork katsu.  Cover the pan with the lid. ",
-        "image": "img/eggs-on-cutlet.png"
+        "title": "Leave for 6 minutes, then turn",
+        "description": "Leave hamburg steak alone to cook on low heat for 6 minutes, then loosen sides of the patty with a spatula then moving the patty onto a large plate, turn over pan used earlier & cover hamburger steak on plate then flip both together so patty is back in the pan with raw side down. Put pan back on stovetop & cook the raw side again for 6 minutes ",
+        "image": ""
       },
       {
-        "title": "Portion it all into a bowl",
-        "description": "Portion the rice into bowls, once the eggs are done (still kind of jiggly and slimy looking, but not liquid anymore, don't allow the egg to become dry and fluffy), pick up the pan and slide/pour the sauce, onions, katsu, and egg onto the rice in the bowl and top with peas or your choice of garnish. ",
-        "image": "img/katsudon-finished.jpg"
+        "title": "Add water and finish cooking the steak",
+        "description": "After 6 minutes add about 250 milliliters of water into pan, enough to cover top of hamburg steak, Turn heat up to medium then cover the pan with a lid; cook meat for about 15 minutes, Check if meat is done by sticking a toothpick in middle & if it comes out clean it's done. ",
+        "image": "img/hamburg-steak-2.jpeg"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": " Ramen - Galaxy Expresss 999",
+    "image": "img/galaxy express ramen.png",
+    "hoverImage": "img/ham-ramen.png",
+    "tip": "If your name is Yuki, don't eat this ramen, you might melt",
+    "category": "meals",
+    "media": ["animated-media", "print-media"],
+    "preferences": ["gluten-free"],
+    "rating": 5,
+    "time": "30 minutes",
+    "nutrition": [
+      { "name": "Protein", "quantity": 20, "unit": "g" },
+      { "name": "Fats", "quantity": 30, "unit": "g" },
+      { "name": "Carbs", "quantity": 40, "unit": "g" },
+      { "name": "Sodium", "quantity": 250, "unit": "mg" },
+      { "name": "Cholesterol", "quantity": 138, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Thick slice of ham", "quantity": 1, "unit": "piece" },
+      { "name": "Eggs", "quantity": 0.5, "unit": "piece" },
+      {
+        "name": "Bundle of dried ramen noodles",
+        "quantity": 1,
+        "unit": "bundles"
+      },
+      { "name": "Green onions", "quantity": 0.5, "unit": "pieces" },
+      { "name": "Water", "quantity": 420, "unit": "ml" },
+      { "name": "Hon Dashi", "quantity": 0.5, "unit": "tsp." },
+      { "name": "Chicken boullion", "quantity": 0.5, "unit": "Tbsp." },
+      { "name": "Sesame oil", "quantity": 0.5, "unit": "Tbsp." },
+      { "name": "Garlic clove", "quantity": 1, "unit": "pieces" },
+      { "name": "Grated ginger", "quantity": 1, "unit": "tsp." },
+      { "name": "Soy sauce", "quantity": 20, "unit": "ml" },
+      { "name": "Mirin", "quantity": 0.5, "unit": "Tbsp." },
+      { "name": "Sake", "quantity": 0.25, "unit": "Tbsp." }
+    ],
+    "directions": [
+      {
+        "title": "Prepare the broth and cook the noodles",
+        "description": "Bring water to a boil and add in dash and chicken bouillon. Mix until fully dissolved. While it's dissolving, cook the noodles according to the package instructions",
+        "image": ""
+      },
+      {
+        "title": "Make the shoyu tare and add it to the broth",
+        "description": "Heat sesame oil in a small skillet over medium-high heat. Add the garlic and ginger and sauté until fragrant, about 30 seconds. Stir and add in the soy sauce and mirin. Stir then remove from the heat. Strain out solids from the tare. Add the shoyu tare to the broth one spoonful at a time until it tastes well seasoned to your liking.",
+        "image": ""
+      },
+      {
+        "title": "Fry the ham and boil the eggs",
+        "description": "Crisp/brown ham slightly in a frying pan. No need to use oil here, just let it cook for a few minutes on either side. Slide in half and serve 2 halves per bowl. Boil eggs to your desired doneness. For this recipe, the best is a medium cooked egg as the yolk is a bit jammy but not too runny. I suggest topping the ramen with some shichimi togarashi for an extra little hit of flavour.",
+        "image": ""
+      },
+      {
+        "title": "Assemble the ramen",
+        "description": "Put noodles down in the bowl, pour over the broth and add tare (adjust to your liking). Finish the bowls with all the toppings, and enjoy! Be sure to eat the ham with your fingers, but be careful it's hot hot hot! ",
+        "image": ""
       }
     ]
   }
