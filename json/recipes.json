@@ -300,7 +300,7 @@
     "media": ["animated-media", "print-media"],
     "preferences": ["gluten-free"],
     "rating": 5,
-    "time": "30 minutes",
+    "time": "20 minutes",
     "nutrition": [
       { "name": "Protein", "quantity": 20, "unit": "g" },
       { "name": "Fats", "quantity": 30, "unit": "g" },
@@ -346,7 +346,78 @@
       {
         "title": "Assemble the ramen",
         "description": "Put noodles down in the bowl, pour over the broth and add tare (adjust to your liking). Finish the bowls with all the toppings, and enjoy! Be sure to eat the ham with your fingers, but be careful it's hot hot hot! ",
-        "image": ""
+        "image": "img/ham-ramen.png"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Mabel Juice",
+    "image": "img/mabel-juice.png",
+    "hoverImage": "img/mabel-juice-real.jpg",
+    "tip": " “If caffeine and nightmares had a baby” - Stan Pines",
+    "category": "drinks",
+    "media": ["animated-media", "print-media"],
+    "preferences": ["vegetarian", "gluten-free"],
+    "rating": 1,
+    "time": "5 minutes",
+    "nutrition": [
+      { "name": "Protein", "quantity": 0, "unit": "g" },
+      { "name": "Fats", "quantity": 0, "unit": "g" },
+      { "name": "Carbs", "quantity": 0, "unit": "g" },
+      { "name": "Sodium", "quantity": 0, "unit": "mg" },
+      { "name": "Sugars", "quantity": 999, "unit": "mg" },
+      { "name": "Cholesterol", "quantity": 0, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Red Kool-Aid", "quantity": 1, "unit": "pack" },
+      { "name": "Sugar", "quantity": 3, "unit": "Tbsp." },
+      { "name": "Water", "quantity": 500, "unit": "ml" },
+      { "name": "Peach Soda", "quantity": 1, "unit": "cans" },
+      { "name": "Fun dip", "quantity": 1, "unit": "pieces" },
+      { "name": "5 hour energy drink", "quantity": 1, "unit": "cans" }
+    ],
+    "directions": [
+      {
+        "title": "Mix all the ingredients together",
+        "description": "If you want the green Mabel Juice, use green Kool-Aid and green Fun Dip. Stir together with a few ice cubes and tiny plastic dinos. Serve in the pitcher of a blender (do NOT blend!).",
+        "image": "img/mabel-juice-real.jpg"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Punch Romaine",
+    "image": "img/hannibal-3.png",
+    "hoverImage": "img/punch-romaine.png",
+    "tip": "Punch Romaine was served at fancy dinners as a palate cleanser between courses. It was a frozen sweet citrus ice-combining lemon water ice with Italian Meringue then topped with rum and champagne.",
+    "category": "drinks",
+    "media": ["live-action-media"],
+    "preferences": [""],
+    "rating": 5,
+    "time": "5 minutes",
+    "nutrition": [
+      { "name": "Protein", "quantity": 2, "unit": "g" },
+      { "name": "Fats", "quantity": 4, "unit": "g" },
+      { "name": "Carbs", "quantity": 10, "unit": "g" },
+      { "name": "Sodium", "quantity": 0, "unit": "mg" },
+      { "name": "Sugars", "quantity": 30, "unit": "g" },
+      { "name": "Cholesterol", "quantity": 0, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Egg white", "quantity": 1, "unit": "pieces" },
+      { "name": "White rum", "quantity": 50, "unit": "ml" },
+      { "name": "White wine", "quantity": 50, "unit": "ml" },
+      { "name": "Simple syrup", "quantity": 25, "unit": "ml" },
+      { "name": "Lemon juice", "quantity": 50, "unit": "ml" },
+      { "name": "Orange juice", "quantity": 50, "unit": "ml" },
+      { "name": "Champagne", "quantity": 100, "unit": "ml" }
+    ],
+    "directions": [
+      {
+        "title": "Mix all the ingredients together",
+        "description": "Shake. Strain into coupe glass full of crushed ice. Top with champagne.",
+        "image": "img/punch-romaine.png"
       }
     ]
   }
