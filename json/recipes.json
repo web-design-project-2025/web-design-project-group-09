@@ -420,5 +420,51 @@
         "image": "img/punch-romaine.png"
       }
     ]
+  },
+  {
+    "id": 9,
+    "name": "Finn's Meatloaf",
+    "image": "img/finn-meatloaf.jpg",
+    "hoverImage": "img/meatlloaf.png",
+    "tip": "Finn's favorite food",
+    "category": "meals",
+    "media": ["animated-media"],
+    "preferences": [""],
+    "rating": 4,
+    "time": "30 minutes",
+    "nutrition": [
+      { "name": "Protein", "quantity": 60, "unit": "g" },
+      { "name": "Fats", "quantity": 150, "unit": "g" },
+      { "name": "Carbs", "quantity": 10, "unit": "g" },
+      { "name": "Sodium", "quantity": 300, "unit": "mg" },
+      { "name": "Sugars", "quantity": 20, "unit": "g" },
+      { "name": "Cholesterol", "quantity": 400, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Ground beef", "quantity": 500, "unit": "g" },
+      { "name": "Milk", "quantity": 200, "unit": "ml" },
+      { "name": "Plain bread crumbs", "quantity": 150, "unit": "g" },
+      { "name": "Pumpkin purée", "quantity": 3, "unit": "Tbsp." },
+      { "name": "Worcestershire Sauce", "quantity": 1, "unit": "Tbsp." },
+      { "name": "Eggs", "quantity": 1, "unit": "piece" },
+      { "name": "Small onionn finely chopped", "quantity": 1, "unit": "piece" },
+      { "name": "Mustard", "quantity": 1, "unit": "Tbsp." },
+      { "name": "Salt and pepper", "quantity": 1, "unit": "tsp. each" },
+      { "name": "Sage powder", "quantity": 0.5, "unit": "tsp." },
+      { "name": "Garlic powder", "quantity": 0.5, "unit": "tsp." },
+      { "name": "Brown sugar", "quantity": 3, "unit": "Tbsp." }
+    ],
+    "directions": [
+      {
+        "title": "Preheat the oven to 180°C and make the meat mixture",
+        "description": "Put all of the meat mixture ingredients in a medium bowl & combine thoroughly with your hands. Line the pan with parchment paper. Scoop the meat mixture into a baking pan or bread pan & pat down & smooth over.",
+        "image": ""
+      },
+      {
+        "title": "Mix the topping ingredients and bake the meatloaf",
+        "description": "In a small bowl stir together the topping ingredients, breaking any brown sugar clumps with the back of the spoon. Pour the resulting sauce onto the top & spread it evenly. Put the glorious loaf of meat in the oven & bake for about an hour or until the middle is a little bubbly & the edges are starting to get dark. Remove from oven, let cool, & serve with yummy sides of your choice.",
+        "image": "img/meatlloaf.png"
+      }
+    ]
   }
 ]
