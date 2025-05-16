@@ -73,6 +73,9 @@
   z-index: 1;
   border-radius: 50%;
 }
+.carousel-btn:hover {
+  background-color: var(--primary-color);
+}
 .carousel-btn svg {
   width: 36px;
   height: 34px;

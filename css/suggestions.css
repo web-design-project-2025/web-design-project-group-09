@@ -129,6 +129,7 @@ form input {
   border: 2px solid var(--accent-color);
   background-color: var(--base-color);
   transition: 100ms ease;
+  overflow: hidden;
 }
 
 form input:hover {

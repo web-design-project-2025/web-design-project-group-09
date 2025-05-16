@@ -34,6 +34,14 @@ body {
   .content-columns li {
     font-size: 20pt;
   }
+  form input,
+  #smaller-area {
+    height: 100px;
+  }
+  form textarea,
+  #preview {
+    max-width: 180%;
+  }
   .bp-text p,
   .header-text,
   .header-team,
@@ -42,13 +50,17 @@ body {
   .category-name,
   .inside_element p,
   .inside_element_faq p,
-  #directions-container li strong {
+  #directions-container li strong,
+  form textarea,
+  form #smaller-area,
+  form input {
     font-size: 22pt;
   }
   #detailed-recipe-container {
     padding-top: 23rem;
   }
-  .footer-col .details {
+  .footer-col .details,
+  form h2 {
     font-size: 24pt;
   }
   .carousel_text,
@@ -165,7 +177,8 @@ body {
     width: max(400px, 100%);
     min-height: 400vh;
   }
-  #form button {
+  #form button,
+  #sug-button {
     font-size: 34pt;
     white-space: nowrap;
   }
