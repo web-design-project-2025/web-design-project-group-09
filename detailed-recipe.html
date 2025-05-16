@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/colored_sections.css" />
     <link rel="stylesheet" href="css/responsiveness.css" />
+    <link rel="stylesheet" href="css/comments.css" />
     <script src="js/searchbar.js" defer></script>
     <script src="js/hide_header.js" defer></script>
+    <script src="js/comments.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -174,7 +176,27 @@
               <h2 class="r35">Directions</h2>
               <ol id="directions-container"></ol>
             </div>
-          </div>
+
+<section id="comment-section">
+  <h2 class="r35">Comments</h2>
+
+  <div id="comment-form-container">
+    <textarea id="comment-input" placeholder="Join the discussion..."></textarea>
+
+    <div class="rating-section">
+      <label>Recipe Rating</label>
+      <div id="stars" class="star-rating">
+        ★★★★★
+      </div>
+    </div>
+
+    <button id="submit-comment">Post Comment</button>
+  </div>
+
+  <h3 id="comment-count">0 comments</h3>
+  <div id="comments-container"></div>
+</section>
+</div>
 
           <!-- RIGHT COLUMN -->
           <div class="right-column">
