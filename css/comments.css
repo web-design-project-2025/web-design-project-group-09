@@ -14,7 +14,7 @@
   width: 100%;
   border: none;
   padding: 1rem;
-  background: #fff1e6;
+  background: var(--decoration-color-lighter);
   border-radius: 20px;
   font-size: 1rem;
 
@@ -29,7 +29,7 @@
 
 .star-rating {
   font-size: 1.5rem;
-  color: #ffd89a;
+  color: var(--primary-color);
 }
 
 .star-rating span {
@@ -38,17 +38,21 @@
 
 #submit-comment {
   align-self: flex-end;
-  background-color: #ffd89a;
-  color: #000;
+  background-color: var(--primary-color);
+  color: black;
   padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
 
+#submit-comment:hover {
+  background-color: var(--decoration-color);
+}
+
 #comments-container {
   margin-top: 2rem;
-  border-top: 2px solid #832612;
+  border-top: 2px solid var(--navigation-color);
   padding-top: 1rem;
 }
 
@@ -84,11 +88,11 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #832612;
+  background-color: var(--navigation-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: white;
   font-size: 20px;
 }
 
@@ -98,7 +102,7 @@
   padding: 0;
   margin: 0;
   font: inherit;
-  color: #832612;
+  color: var(--navigation-color);
   font-size: 0.9rem;
   cursor: pointer;
   display: inline-flex;

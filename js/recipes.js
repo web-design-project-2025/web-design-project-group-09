@@ -51,12 +51,16 @@ function createRecipeElement(recipe) {
   figure.appendChild(img);
 
   // Create the title and details elements
-  var title = document.createElement("strong");
-  title.innerText = recipe.name;
+// Title
+var title = document.createElement("strong");
+title.classList.add("recipe-title");
+title.innerText = recipe.name;
 
-  var details = document.createElement("p");
-  details.classList.add("recipe-description");
-  details.innerHTML = `${"★".repeat(recipe.rating)}<br>${recipe.time}`;
+// Rating + time
+var details = document.createElement("p");
+details.classList.add("recipe-description");
+details.innerHTML = `${"★".repeat(recipe.rating)}<br>${recipe.time}`;
+
 
   var caption = document.createElement("figcaption");
   caption.appendChild(title);

@@ -25,7 +25,7 @@
 
 /* Extra tip */
 .extra-tip-box {
-  background-color: #fff1e6;
+  background-color: var(--decoration-color-lighter);
   padding: 20px;
   border-radius: 12px;
 }
@@ -37,7 +37,7 @@
 
 /* Directions */
 .directions-block {
-  background-color: #fff1e6;
+  background-color: var(--decoration-color-lighter);
   padding: 20px;
   border-radius: 12px;
 }
@@ -96,16 +96,16 @@
 .serving-buttons button {
   padding: 10px 20px;
   font-size: 1rem;
-  border: 3px solid #832612;
+  border: 3px solid var(--navigation-color);
   border-radius: 10px;
-  background-color: #fff1e6;
+  background-color: var(--decoration-color-lighter);
   color: black;
   cursor: pointer;
 }
 
 .serving-buttons button:hover {
-  background-color: #832612;
-  color: #fff1e6;
+  background-color: var(--navigation-color);
+  color: var(--decoration-color-lighter);
 }
 
 #directions-container li img {
@@ -118,7 +118,7 @@
 /* Nutrition and Ingredients */
 
 .nutrition-ingredients-box {
-  background-color: #fff1e6;
+  background-color: var(--decoration-color-lighter);
   padding: 20px 30px;
   border-radius: 12px;
 }
@@ -152,13 +152,12 @@
 
 /* Sidebar blocks */
 .sidebar-block {
-  background-color: #fff1e6;
+  background-color: var(--decoration-color-lighter);
   border-radius: 15px;
   padding: 20px;
 }
 
 .sidebar-block h3 {
-  font-size: 1.3rem;
   margin-bottom: 15px;
 }
 
@@ -201,7 +200,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #832612;
+  background-color: var(--navigation-color);
   /* opacity: 0.6; */
 
   /* Putting the line in the middle between the rght and left columns */
@@ -210,6 +209,10 @@
 }
 
 .serving-buttons .singular-serving-button.selected {
-  background-color: #832612;
-  color: #fff1e6;
+  background-color: var(--navigation-color);
+  color: var(--decoration-color-lighter);
+}
+
+#detailed-recipe-container {
+  padding-top: 10rem;
 }
