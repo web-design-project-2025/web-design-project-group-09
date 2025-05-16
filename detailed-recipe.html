@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/colored_sections.css" />
     <link rel="stylesheet" href="css/responsiveness.css" />
+    <link rel="stylesheet" href="css/comments.css" />
     <script src="js/searchbar.js" defer></script>
     <script src="js/hide_header.js" defer></script>
+    <script src="js/comments.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -124,6 +126,7 @@
     <main class="main" id="detailed-recipe-container">
       <div class="recipe-page-layout">
         <div class="content-columns">
+          
           <!-- LEFT COLUMN -->
           <div class="left-column">
             <div class="main-image-box">
@@ -174,7 +177,27 @@
               <h2 class="r35">Directions</h2>
               <ol id="directions-container"></ol>
             </div>
-          </div>
+
+<section id="comment-section">
+  <h2 class="r35">Comments</h2>
+
+  <div id="comment-form-container">
+    <textarea id="comment-input" class="ae_rg" placeholder="Join the discussion..."></textarea>
+
+    <div class="rating-section">
+      <label class="ae_rg">Recipe Rating</label>
+      <div id="stars" class="star-rating">
+        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+
+    <button id="submit-comment" class="ae_bd">Post Comment</button>
+  </div>
+
+  <h3 id="comment-count" class="ae_bd">0 comments</h3>
+  <div id="comments-container" class="ae_rg"></div>
+</section>
+</div>
 
           <!-- RIGHT COLUMN -->
           <div class="right-column">

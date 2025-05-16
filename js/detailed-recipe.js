@@ -1,4 +1,6 @@
 let currentRecipe = null;
+let selectedServings = 1;
+
 
 async function loadRecipe() {
   const params = new URLSearchParams(document.location.search);
@@ -110,7 +112,7 @@ function updateServings(servings) {
     const servingsButton = buttons[i];
     servingsButton.classList.remove("selected");
 
-    if (servingsButton.textContent === servings + "x") {
+    if (servingsButton.textContent.trim() === servings + "x") {
       servingsButton.classList.add("selected");
     }
   }

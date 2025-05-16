@@ -92,6 +92,27 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// Function for the categories from the home page
+// This function will be called when the page is loaded
+window.addEventListener("DOMContentLoaded", function () {
+  const params = new URLSearchParams(window.location.search);
+  const categoryParam = params.get("category");
+
+  // Check if the category parameter is present in the URL
+  if (categoryParam) {
+    const categoryCheckbox = document.getElementById(categoryParam);
+    if (categoryCheckbox) {
+      categoryCheckbox.checked = true;
+    }
+  }
+
+  // Delay filter call until recipes are loaded
+  setTimeout(() => {
+    filterRecipes();
+  }, 200);
+});
+
+
 // Filtering recipes function
 function filterRecipes() {
   // Create empty arrays to store selected filters

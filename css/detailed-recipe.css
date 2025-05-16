@@ -28,7 +28,6 @@
   background-color: #fff1e6;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 30px;
 }
 
 .extra-tip-box h3 {
@@ -210,7 +209,7 @@
   left: calc(100% + 30px);
 }
 
-.singular-serving-button.selected {
+.serving-buttons .singular-serving-button.selected {
   background-color: #832612;
   color: #fff1e6;
 }
