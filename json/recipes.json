@@ -64,7 +64,7 @@
     "category": "drinks",
     "media": ["print-media", "animated-media"],
     "preferences": ["vegetarian", "dairy-free", "gluten-free"],
-    "rating": 5,
+    "rating": 3,
     "time": "10 minutes",
     "nutrition": [
       { "name": "Protein", "quantity": 13, "unit": "g" },
@@ -163,6 +163,144 @@
         "title": "Bake",
         "description": "Place in the oven and bake for 30 minutes , reduce the temperature to 300 F and bake for 30 more minutes. Then turn off the heat and leave the cheesecake in the oven for 60 minutes. Let it cool completely.",
         "image": "img/bloom-cheesecake-steps/bloom-cheesecake-step6.png"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Katsudon - Yuri!!! on Ice",
+    "image": "img/katsudon-drawing.jpg",
+    "hoverImage": "img/katsudon-real.jpg",
+    "tip": "The hamburg steak is given to warriors for their birthday",
+    "category": "meals",
+    "media": ["animated-media", "print-media"],
+    "preferences": [],
+    "rating": 4,
+    "time": "1 hour",
+    "nutrition": [
+      { "name": "Protein", "quantity": 23, "unit": "g" },
+      { "name": "Fats", "quantity": 30, "unit": "g" },
+      { "name": "Carbs", "quantity": 68, "unit": "g" },
+      { "name": "Sodium", "quantity": 200, "unit": "mg" },
+      { "name": "Cholesterol", "quantity": 120, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Cooked Rice", "quantity": 200, "unit": "g" },
+      { "name": "Boneless pork chops", "quantity": 1, "unit": "pieces" },
+      { "name": "Flour for dusting", "quantity": 10, "unit": "g" },
+      { "name": "Salt and pepper", "quantity": 1, "unit": "g" },
+      { "name": "egg, beaten, for breading", "quantity": 1, "unit": "pieces" },
+      { "name": "eggs", "quantity": 1, "unit": "pieces" },
+      { "name": "panko", "quantity": 32, "unit": "g" },
+      {
+        "name": "dashi stock (you can use chicken or vegetable stock if you can't get a hold of some dashi or dashi powder)",
+        "quantity": 120,
+        "unit": "g"
+      },
+      { "name": "Soy Sauce", "quantity": 0.5, "unit": "Tbsp." },
+      { "name": "Mirin", "quantity": 1, "unit": "Tbsp." },
+      { "name": "Sugar", "quantity": 1, "unit": "tsp." },
+      { "name": "Small onion", "quantity": 0.5, "unit": "pieces" },
+      {
+        "name": "Peas/Scallions/Green onions for toppings",
+        "quantity": 1,
+        "unit": "handful"
+      }
+    ],
+    "directions": [
+      {
+        "title": "Heat up oil in a pan/stove",
+        "description": "About half full of oil, or ~2cm deep should do, if you have an air fryer, you can also use that",
+        "image": ""
+      },
+      {
+        "title": "Prepare the pork cutlet",
+        "description": "Use a meat mallet to pound the pork to about 1cm thick. Season the pork chops with salt and pepper, and dust them with the flour.",
+        "image": "img/dusted pork chops.jpeg"
+      },
+      {
+        "title": "Coat the pork chops with panko and fry them",
+        "description": "Dip the pork into the first beaten egg, then coat them with panko crumbs. Once the oil is hot, place the breaded pork into the oil.  Fry them until golden brown on each side.  Once they're cooked, remove them from the oil, and set them aside on a plate with some paper towels to absorb the excess oil.",
+        "image": "img/breaded-pork-chops.jpg"
+      },
+      {
+        "title": "Mix ingredients into a pan",
+        "description": "If you haven't already made your rice, start cooking it now. Add the stock, soy sauce, mirin and sugar to a pan (one big enough to hold both pork chops) and bring it to a simmer.  Add in the onions and cover the pan with a lid.Once the onions are translucent, slice the pork katsu, and carefully (as to keep the slices together, treating them as if it were still a whole cutlet) add it on top of the onions.Beat the remaining two eggs and pour them on top of the pork katsu.  Cover the pan with the lid. ",
+        "image": "img/eggs-on-cutlet.png"
+      },
+      {
+        "title": "Portion it all into a bowl",
+        "description": "Portion the rice into bowls, once the eggs are done (still kind of jiggly and slimy looking, but not liquid anymore, don't allow the egg to become dry and fluffy), pick up the pan and slide/pour the sauce, onions, katsu, and egg onto the rice in the bowl and top with peas or your choice of garnish. ",
+        "image": "img/katsudon-finished.jpg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hamburg Steak",
+    "image": "img/hamburg-drawing.png",
+    "hoverImage": "img/hamburg steak.png",
+    "tip": "Katsu and the word for victory are pronounced the same in Japanese (カツ and 勝つ, respectively), so athletes will often eat some katsudon before or after they compete.",
+    "category": "meals",
+    "media": ["animated-media", "print-media"],
+    "preferences": [],
+    "rating": 5,
+    "time": "30 minutes",
+    "nutrition": [
+      { "name": "Protein", "quantity": 40, "unit": "g" },
+      { "name": "Fats", "quantity": 30, "unit": "g" },
+      { "name": "Carbs", "quantity": 68, "unit": "g" },
+      { "name": "Sodium", "quantity": 200, "unit": "mg" },
+      { "name": "Cholesterol", "quantity": 120, "unit": "mg" }
+    ],
+    "ingredients": [
+      { "name": "Cooked Rice", "quantity": 200, "unit": "g" },
+      { "name": "Boneless pork chops", "quantity": 1, "unit": "pieces" },
+      { "name": "Flour for dusting", "quantity": 10, "unit": "g" },
+      { "name": "Salt and pepper", "quantity": 1, "unit": "g" },
+      { "name": "egg, beaten, for breading", "quantity": 1, "unit": "pieces" },
+      { "name": "eggs", "quantity": 1, "unit": "pieces" },
+      { "name": "panko", "quantity": 32, "unit": "g" },
+      {
+        "name": "dashi stock (you can use chicken or vegetable stock if you can't get a hold of some dashi or dashi powder)",
+        "quantity": 120,
+        "unit": "g"
+      },
+      { "name": "Soy Sauce", "quantity": 0.5, "unit": "Tbsp." },
+      { "name": "Mirin", "quantity": 1, "unit": "Tbsp." },
+      { "name": "Sugar", "quantity": 1, "unit": "tsp." },
+      { "name": "Small onion", "quantity": 0.5, "unit": "pieces" },
+      {
+        "name": "Peas/Scallions/Green onions for toppings",
+        "quantity": 1,
+        "unit": "handful"
+      }
+    ],
+    "directions": [
+      {
+        "title": "Heat up oil in a pan/stove",
+        "description": "About half full of oil, or ~2cm deep should do, if you have an air fryer, you can also use that",
+        "image": ""
+      },
+      {
+        "title": "Prepare the pork cutlet",
+        "description": "Use a meat mallet to pound the pork to about 1cm thick. Season the pork chops with salt and pepper, and dust them with the flour.",
+        "image": "img/dusted pork chops.jpeg"
+      },
+      {
+        "title": "Coat the pork chops with panko and fry them",
+        "description": "Dip the pork into the first beaten egg, then coat them with panko crumbs. Once the oil is hot, place the breaded pork into the oil.  Fry them until golden brown on each side.  Once they're cooked, remove them from the oil, and set them aside on a plate with some paper towels to absorb the excess oil.",
+        "image": "img/breaded-pork-chops.jpg"
+      },
+      {
+        "title": "Mix ingredients into a pan",
+        "description": "If you haven't already made your rice, start cooking it now. Add the stock, soy sauce, mirin and sugar to a pan (one big enough to hold both pork chops) and bring it to a simmer.  Add in the onions and cover the pan with a lid.Once the onions are translucent, slice the pork katsu, and carefully (as to keep the slices together, treating them as if it were still a whole cutlet) add it on top of the onions.Beat the remaining two eggs and pour them on top of the pork katsu.  Cover the pan with the lid. ",
+        "image": "img/eggs-on-cutlet.png"
+      },
+      {
+        "title": "Portion it all into a bowl",
+        "description": "Portion the rice into bowls, once the eggs are done (still kind of jiggly and slimy looking, but not liquid anymore, don't allow the egg to become dry and fluffy), pick up the pan and slide/pour the sauce, onions, katsu, and egg onto the rice in the bowl and top with peas or your choice of garnish. ",
+        "image": "img/katsudon-finished.jpg"
       }
     ]
   }
