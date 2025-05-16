@@ -13,7 +13,7 @@
 .profile-wrapper {
   margin: 0 auto;
   background-color: var(--input-color);
-  min-height: 150vh;
+  min-height: 120vh;
   width: max(1000px);
   display: flex;
   flex-direction: column;
