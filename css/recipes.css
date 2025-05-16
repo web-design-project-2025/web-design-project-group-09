@@ -24,6 +24,7 @@ input[type="checkbox"] {
 /* Filter groups in the sidebar */
 .filter-section {
   flex: 0 0 200px;
+  font-size: 14pt;
 }
 
 .filter-section h2 {
@@ -55,6 +56,46 @@ input[type="checkbox"] {
   width: 100%;
   border-radius: 5px;
 }
+
+
+
+/* Hover over animation for the recipes*/
+/* Image transitions */
+.recipe-1 {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.recipe-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.recipe:hover .recipe-1 {
+  opacity: 0;
+}
+
+.recipe:hover .recipe-2 {
+  opacity: 1;
+}
+
+/* Recipe title */
+.recipe-title {
+  font-size: 16pt;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Rating + time */
+.recipe-description {
+  font-size: 14pt;
+  color: #555;
+  line-height: 1.4;
+}
+
 
 /* Responsiveness */
 @media screen and (min-width: 1030px) {
@@ -89,28 +130,4 @@ input[type="checkbox"] {
   .recipes-container {
     grid-template-columns: repeat(1, 1fr);
   }
-}
-
-/* Hover over animation for the recipes*/
-/* Image transitions */
-
-.recipe-1 {
-  transition: opacity 0.4s ease-in-out;
-}
-
-.recipe-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: auto;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-
-.recipe:hover .recipe-1 {
-  opacity: 0;
-}
-
-.recipe:hover .recipe-2 {
-  opacity: 1;
 }
