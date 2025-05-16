@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
 }
+
 .main {
   padding: 0;
 }
@@ -25,24 +26,42 @@ html {
   font-size: 48pt;
   color: var(--text-color);
   text-align: center;
+  margin-top: 50px;
 }
-.test {
+
+#subhead-text {
+  color: var(--text-color);
+  margin-left: 60px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+#normal-text {
+  font-family: "Aeonik-Regular";
+  src: url(../Aeonik-Regular.ttf);
+  font-size: 20pt;
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sectioning-image {
   display: grid;
   grid-template-columns: 1fr 800px 1fr;
 
   width: max(800px);
 }
-.test2 {
+.general-image {
   margin: 0 auto;
   max-width: 1380px;
 }
-.uni1 {
+.uni-1 {
   align-content: center;
   padding: 0;
   margin: 0;
   margin-right: -32px;
 }
-.uni2 {
+.uni-2 {
   align-content: center;
   padding: 0;
   margin: 0;
@@ -53,7 +72,7 @@ html {
   /* width: max(800px); */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
   justify-content: center;
 }
 
@@ -61,9 +80,9 @@ form {
   width: min(400px, 100%);
   margin-top: 20px;
   margin-bottom: 50px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   gap: 10px;
 }
 
@@ -73,29 +92,41 @@ form > div {
   justify-content: center;
 }
 
-form label {
-  flex-shrink: 0;
-
-  width: 50px;
-  background-color: var(--accent-color);
-  fill: var(--base-color);
-  border-radius: 10px 0 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+form textarea {
   box-sizing: border-box;
+  flex-grow: 1;
+  margin-left: 60px;
+  height: 170px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--base-color);
+  transition: 100ms ease;
 }
 
 form input {
   box-sizing: border-box;
   flex-grow: 1;
-
-  height: 50px;
+  margin-left: 60px;
+  height: 70px;
   padding: 1em;
   font: inherit;
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px;
   border: 2px solid var(--accent-color);
-  border-left: none;
+  background-color: var(--base-color);
+  transition: 100ms ease;
+}
+
+#smaller-area {
+  box-sizing: border-box;
+  flex-grow: 1;
+  margin-left: 60px;
+  height: 70px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
   background-color: var(--base-color);
   transition: 100ms ease;
 }
@@ -109,16 +140,8 @@ form input:focus {
   border-color: var(--text-color);
 }
 
-div:has(input:focus) > label {
-  background-color: var(--text-color);
-}
-
-form input::placeholder {
-  color: var(--text-color);
-}
-
-form button {
-  margin-top: 10px;
+#sug-button {
+  margin-left: 60px;
   border: none;
   border-radius: 1000px;
   padding: 0.85em 4em;
@@ -128,24 +151,30 @@ form button {
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
 }
 
-form button:hover {
+#image-preview {
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-bottom: 60px;
+}
+
+#preview {
+  display: none;
+  max-width: 200px;
+  border: 1px solid #ccc;
+}
+
+#sug-button:hover {
   background-color: var(--text-color);
 }
 
-form button:focus {
+#sug-button:focus {
   outline: none;
   background-color: var(--text-color);
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
 @media (max-width: 1000px) {
   .test {
     width: max(400px, 100%);
