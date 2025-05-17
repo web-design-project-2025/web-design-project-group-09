@@ -12,6 +12,46 @@
   {
     "id": 3,
     "name": "Bacon Pancakes Recipe",
-    "link": "#"
+    "link": "detailed-recipe.html?id=1"
+  },
+  {
+    "id": 4,
+    "name": "Senku Cola Recipe",
+    "link": "detailed-recipe.html?id=2"
+  },
+  {
+    "id": 5,
+    "name": "Bloom Into You Cheesecake Recipe",
+    "link": "detailed-recipe.html?id=3"
+  },
+  {
+    "id": 6,
+    "name": "Katsudon - Yuri!!! on Ice Recipe",
+    "link": "detailed-recipe.html?id=4"
+  },
+  {
+    "id": 7,
+    "name": "Hamburg Steak Recipe",
+    "link": "detailed-recipe.html?id=5"
+  },
+  {
+    "id": 8,
+    "name": "Ramen - Galaxy Expresss 999 Recipe",
+    "link": "detailed-recipe.html?id=6"
+  },
+  {
+    "id": 9,
+    "name": "Mabel Juice Recipe",
+    "link": "detailed-recipe.html?id=7"
+  },
+  {
+    "id": 10,
+    "name": "Punch Romaine Recipe",
+    "link": "detailed-recipe.html?id=8"
+  },
+  {
+    "id": 11,
+    "name": "Finn's Meatloaf Recipe",
+    "link": "detailed-recipe.html?id=9"
   }
 ]
