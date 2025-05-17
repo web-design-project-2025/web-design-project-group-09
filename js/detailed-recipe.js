@@ -6,6 +6,14 @@ async function loadRecipe() {
   const params = new URLSearchParams(document.location.search);
   const id = params.get("id");
 
+
+  // Check if 'id' exists
+  if (!id) {
+    showError("Missing recipe ID in the URL.");
+    return;
+  }
+
+  try {
   const response = await fetch("json/recipes.json");
   const data = await response.json();
 
@@ -15,7 +23,7 @@ async function loadRecipe() {
   // We use == to allow for both string and number comparison
   const recipe = data.find((r) => r.id == id);
 
-  if (recipe) {
+    if (recipe) {
     currentRecipe = recipe;
 
     document.getElementById("detailed-recipe-title").innerText = recipe.name;
@@ -33,41 +41,38 @@ async function loadRecipe() {
       tipText.innerText = recipe.tip;
     }
 
-    // Directions
-    const directionsContainer = document.getElementById("directions-container");
-    let directions = "";
+      // Directions
+      const directionsContainer = document.getElementById("directions-container");
+      let directions = "";
 
-    if (recipe.directions && recipe.directions.length > 0) {
-      for (let i = 0; i < recipe.directions.length; i++) {
-        // We call step the current step of the recipe for better readability
+      if (recipe.directions && recipe.directions.length > 0) {
+        for (let i = 0; i < recipe.directions.length; i++) {
+          const step = recipe.directions[i];
+          directions += "<li>";
 
-        const step = recipe.directions[i];
-        directions += "<li>";
+          if (step.title) {
+            directions += `<strong>${step.title}</strong><br>`;
+          }
 
-        // Step title
-        if (step.title) {
-          directions += `<strong>${step.title}</strong><br>`;
+          if (step.description) {
+            directions += `<p>${step.description}</p>`;
+          }
+
+          if (step.image) {
+            directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
+          }
+
+          directions += "</li>";
         }
-
-        // Step description
-        if (step.description) {
-          directions += `<p>${step.description}</p>`;
-        }
-
-        // Step image
-        if (step.image) {
-          // The image property is optional, so we check if it exists before using it
-          directions += `<img src="${step.image}" alt="Step ${i + 1} image">`;
-        }
-
-        directions += "</li>";
       }
-    }
 
-    directionsContainer.innerHTML = directions;
-  } else {
-    document.getElementById("detailed-recipe-title").innerText =
-      "Recipe not found";
+      directionsContainer.innerHTML = directions;
+    } else {
+      showError("Recipe not found.");
+    }
+  } catch (error) {
+    console.error("Error loading recipe:", error);
+    showError("Something went wrong while loading the recipe.");
   }
 }
 
@@ -79,7 +84,6 @@ function renderIngredients(servings = 1) {
   let ingredientsHTML = "";
 
   currentRecipe.ingredients.forEach((ingredient) => {
-    // We multiple the base quantity by the sekected number of servings which is a number wso we can use it directly
     const total = ingredient.quantity * servings;
     ingredientsHTML += `<li>${ingredient.name}:<strong> ${total} ${ingredient.unit} </strong> </li>`;
   });
@@ -116,6 +120,13 @@ function updateServings(servings) {
       servingsButton.classList.add("selected");
     }
   }
+}
+
+function showError(message) {
+  document.querySelector(".recipe-page-layout").style.display = "none";
+  const errorBox = document.getElementById("error-message");
+  errorBox.querySelector("p").innerText = message;
+  errorBox.style.display = "block";
 }
 
 loadRecipe();
