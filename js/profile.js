@@ -1,3 +1,6 @@
+/* Most of the code logic is inspired by https://www.youtube.com/watch?v=hdI2bqOjy3c, 
+other individual commands and elements were obtained from https://developer.mozilla.org/en-US/docs/Web/API/Window/location */
+
 document.addEventListener("DOMContentLoaded", () => {
   const user = JSON.parse(localStorage.getItem("loggedInUser"));
 

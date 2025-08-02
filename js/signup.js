@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-
+    // Code inspired by: https://www.youtube.com/watch?v=bVl5_UdcAy0&t=1120s
     // Error handling is made in the same way as in the login.js file.
     // This code handles the signup process, including form submission, validation, and error handling.
     // Catch unexpected signup errors
@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const username = document.getElementById("username-input").value.trim();
       const email = document.getElementById("email-input").value.trim();
       const password = document.getElementById("password-input").value.trim();
-      const repeatPassword = document.getElementById("repeat-password-input").value.trim();
+      const repeatPassword = document
+        .getElementById("repeat-password-input")
+        .value.trim();
 
       if (!username || !email || !password || !repeatPassword) {
         showError("All fields are required.");
@@ -60,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         window.location.href = "login.html";
       }, 2000);
-
     } catch (err) {
       console.error("Unexpected signup error:", err);
       showError("Something went wrong. Try again.");
@@ -83,7 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = encoder.encode(password);
       const hashBuffer = await crypto.subtle.digest("SHA-256", data);
       const hashArray = Array.from(new Uint8Array(hashBuffer));
-      const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+      const hashHex = hashArray
+        .map((b) => b.toString(16).padStart(2, "0"))
+        .join("");
       return hashHex;
     } catch (hashError) {
       console.error("Hashing failed:", hashError);
