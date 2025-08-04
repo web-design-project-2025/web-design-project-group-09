@@ -1,8 +1,11 @@
+// Most of the following code was greatly inspired by the logic of Hamstergram, particularly in how the data is dynamically fetched, processed, and rendered into the DOM
 let currentRecipe = null;
 let selectedServings = 1;
 
 
 async function loadRecipe() {
+  // The idea to use URLSearchParams was taken from the following link and the materials posted with the course
+  // The link: https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams 
   const params = new URLSearchParams(document.location.search);
   const id = params.get("id");
 
@@ -13,12 +16,14 @@ async function loadRecipe() {
     return;
   }
 
+  // The fetch() and .json() pattern was explained during lectures with Garrit
   try {
   const response = await fetch("json/recipes.json");
   const data = await response.json();
 
   // Find the recipe with the given id
-  // The idea to use find() was taken from MDN
+  // The idea to use it was taken from the following link and the lectures with Garrit: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+  // It is used to get the specific recipe based on ID which is similar to how post data was selected and rendered in Hamstegram
   // It returns the first recipe that matches the condition
   // We use == to allow for both string and number comparison
   const recipe = data.find((r) => r.id == id);
@@ -33,6 +38,7 @@ async function loadRecipe() {
     renderNutrition(1);
 
     // Extra tip
+    // We got inspired by how conditional display like buttons was handled in Hamstegram when creating the extra tip box feature
     const tipBox = document.getElementById("extra-tip-box");
     const tipText = document.getElementById("extra-tip");
 
@@ -79,6 +85,7 @@ async function loadRecipe() {
 // Rendering the ingredients list
 // This function takes the number of servings as an argument and updates the ingredients list accordingly
 // The ingredients are multiplied by the number of servings
+// Similar rendering logic to rendering content in Hamstegram like looping over data and inserting into the DOM
 function renderIngredients(servings = 1) {
   const ingredientsList = document.getElementById("ingredients-list");
   let ingredientsHTML = "";
@@ -106,6 +113,7 @@ function renderNutrition(servings = 1) {
 }
 
 // Update servings and toggle selected button
+// Inspired by how UI state like button text reflects post data in Hamstegram
 function updateServings(servings) {
   renderIngredients(servings);
   renderNutrition(servings);
