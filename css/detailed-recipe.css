@@ -258,3 +258,39 @@
   background-color: #600;
 }
 
+.social-icons {
+  display: flex;
+  gap: 11%;
+  justify-content: flex-start;
+
+}
+
+.social-icons a {
+  font-size: 40px;
+  transition: color 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: var(--navigation-color);
+  background-color: var(--decoration-color-lighter);
+  transform: scale(1.1);
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*Responsiveness for the Follow Us Section*/
+@media (max-width: 1918px) {
+  .social-icons a {
+    flex: 1 1;
+  }
+}
+
+@media (max-width: 1463px) {
+  .social-icons a {
+    flex: 1 1;
+  }
+}
